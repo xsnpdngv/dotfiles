@@ -9,7 +9,7 @@
 set nocompatible
 
 " if X11 forwarding is active, then starting Vim would take long without it
-"set clipboard=exclude:.* " not to try connecting to the X server's clipboard
+set clipboard=exclude:.* " not to try connecting to the X server's clipboard
 
 " if autocommands are supported
 if has("autocmd")
@@ -33,7 +33,6 @@ if &t_Co > 2 || has("gui_running")
   highlight OverLength ctermbg=white ctermfg=red
   match OverLength /\%81v.\+/
 endif
-
 
 set history=100    " keep 100 lines of command line history
 set ruler          " show cursor position all the time
