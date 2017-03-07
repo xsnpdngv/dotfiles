@@ -55,6 +55,8 @@ nnoremap \ za
 " enable mouse in terminal emulators
 if has('mouse')
   set mouse=a
+  " NOTE: this makes normal mouse selection and copy-paste to not work,
+  " use <ctrl>+<shift>+<left mouse> instead to select the windows way
 endif
 
 " add command to convert to unix format
