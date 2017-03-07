@@ -38,6 +38,7 @@ set history=100    " keep 100 lines of command line history
 set ruler          " show cursor position all the time
 set showcmd        " display incomplete commands
 set showmode       " display mode
+set paste          " paste from other application w/o indenting
 set nojoinspaces   " use one space instead of two if joining lines
 set encoding=utf-8 " set UTF-8 file encoding
 set backspace=indent,eol,start " backspace to go over everything in insert mode
