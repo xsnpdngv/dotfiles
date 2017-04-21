@@ -44,6 +44,7 @@ set encoding=utf-8 " set UTF-8 file encoding
 set backspace=indent,eol,start " backspace to go over everything in insert mode
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab " 4 space tab
 set pastetoggle=<F2> " set F2 to toggle paste mode
+set cm=blowfish2   " enable strong crypt method for command :X
 
 " visualize tabs and trails (tab in command mode turns off/on)
 set list listchars=tab:»\ ,trail:·
