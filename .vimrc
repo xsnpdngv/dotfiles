@@ -38,13 +38,13 @@ set history=100    " keep 100 lines of command line history
 set ruler          " show cursor position all the time
 set showcmd        " display incomplete commands
 set showmode       " display mode
-"set paste          " paste from other application w/o indenting
 set nojoinspaces   " use one space instead of two if joining lines
 set encoding=utf-8 " set UTF-8 file encoding
 set backspace=indent,eol,start " backspace to go over everything in insert mode
-set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab " 4 space tab
+set tabstop=4 softtabstop=0 shiftwidth=4
+set expandtab smarttab
+"set paste          " paste from other application w/o indenting
 set pastetoggle=<F2> " set F2 to toggle paste mode
-set cm=blowfish2   " enable strong crypt method for command :X
 
 " visualize tabs and trails (tab in command mode turns off/on)
 set list listchars=tab:»\ ,trail:·
@@ -56,8 +56,11 @@ nnoremap \ za
 
 " enable mouse in terminal emulators if in insert mode
 if has('mouse')
-  set mouse=i
-  " NOTE: i keeps terminal mode selection working in normal and visual modes
+  set mouse=a
+  " i keeps terminal mode selection working in normal and visual modes
+  " but in a mode Shift+Ctrl+C and Shift+Ctrl+V works fine for copy-paste
+  set mousehide " hide mouse while typing
+  set mousemodel=popup " right mouse button pops up a menu, like in Windows
 endif
 
 " add command :UU to convert to unix format
