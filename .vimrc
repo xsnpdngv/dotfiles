@@ -1,8 +1,7 @@
 " ==========================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  March 21, 2017
-" Version:       1.0
+" Last Changed:  April 28, 2017
 " ==========================================================================
 
 " enable Vim specific settings (instead of vi compatible mode)
