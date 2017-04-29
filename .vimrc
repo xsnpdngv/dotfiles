@@ -1,13 +1,15 @@
 " ==========================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  April 28, 2017
+" Last Changed:  April 29, 2017
 " ==========================================================================
 
-" enable Vim specific settings (instead of vi compatible mode)
-set nocompatible
+set nocompatible  " enable Vim specific settings (instead of vi compatible mode)
+set nowritebackup " do not write backup
+set noswapfile    " do not use swap file
+set ff=unix       " use unix file format
 
-" if X11 forwarding is active, then starting Vim would take long without it
+" if X11 forwarding is active, then starting Vim might take long without it
 "set clipboard=exclude:.* " not to try connecting to the X server's clipboard
 
 " if autocommands are supported
@@ -28,24 +30,27 @@ if &t_Co > 2 || has("gui_running")
   syntax on        " syntax highlight
   set hlsearch     " search pattern highlight
   set incsearch    " dynamic search pattern highlight
-  " overlength highlight (> 80)
-  highlight OverLength ctermbg=white ctermfg=red
-  match OverLength /\%81v.\+/
+  " mark first overlength character (@81)
+  highlight OverLength ctermfg=white ctermbg=darkgrey
+  match OverLength /\%81v./
 endif
 
-set history=100    " keep 100 lines of command line history
+set history=500    " keep 100 lines of command line history
 set ruler          " show cursor position all the time
-set showcmd        " display incomplete commands
-set showmode       " display mode
-set nojoinspaces   " use one space instead of two if joining lines
+set showcmd        " show incomplete commands
+set showmode       " show mode
+set nojoinspaces   " usea only one space instead of two if joining lines
 set encoding=utf-8 " set UTF-8 file encoding
 set backspace=indent,eol,start " backspace to go over everything in insert mode
-set tabstop=4 softtabstop=0 shiftwidth=4
-set expandtab smarttab
+set softtabstop=0  " turn mixing of tabs and spaces off
+set tabstop=4      " set tab length in spaces (manual indent)
+set shiftwidth=4   " set the number of spaces inserted for a tab (autoindent)
+set expandtab      " convert tabs to spaces
+"set smarttab       " not sure...
 "set paste          " paste from other application w/o indenting
 set pastetoggle=<F2> " set F2 to toggle paste mode
 
-" visualize tabs and trails (tab in command mode turns off/on)
+" visualize tabs and trails (turns off/on with <tab> in command mode)
 set list listchars=tab:»\ ,trail:·
 nnoremap <Tab> :set list!<CR>
 
@@ -56,11 +61,14 @@ nnoremap \ za
 " enable mouse in terminal emulators if in insert mode
 if has('mouse')
   set mouse=a
-  " i keeps terminal mode selection working in normal and visual modes
-  " but in a mode Shift+Ctrl+C and Shift+Ctrl+V works fine for copy-paste
+  " Set mouse to work in all modes, resulting easy positioning by clicking and
+  " easy Visual mode selection. However, by easy Visual mode selection, default
+  " terminal mouse behavior is lost. Default terminal mode mouse behavior can be
+  " achieved by pressing <Shift> while both selecting and clicking.
+  " Copy-Paste also works for the selection with Ctrl+Shift+C-Ctrl+Shit+V.
   set mousehide " hide mouse while typing
   set mousemodel=popup " right mouse button pops up a menu, like in Windows
 endif
 
-" add command :UU to convert to unix format
+" add command :UU to convert to unix file format
 command UU w ++ff=unix
