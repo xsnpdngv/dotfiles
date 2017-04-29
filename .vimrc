@@ -12,6 +12,10 @@ set ff=unix       " use unix file format
 " if X11 forwarding is active, then starting Vim might take long without it
 "set clipboard=exclude:.* " not to try connecting to the X server's clipboard
 
+" Get rid of the delay when pressing O (for example)
+" http://stackoverflow.com/questions/2158516/vim-delay-before-o-opens-a-new-line
+set timeout timeoutlen=1000 ttimeoutlen=100
+
 " if autocommands are supported
 if has("autocmd")
   " enable file type detection, use the default filetype settings,
