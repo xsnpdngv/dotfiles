@@ -1,13 +1,17 @@
 " ==========================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  April 29, 2017
+" Last Changed:  April 30, 2017
 " ==========================================================================
 
 set nocompatible  " enable Vim specific settings (instead of vi compatible mode)
 set nowritebackup " do not write backup
 set noswapfile    " do not use swap file
 set ff=unix       " use unix file format
+
+" use clipboard as the unnamed register, so Yank-Put cross-works between
+" different Vim instances
+set clipboard=unnamedplus
 
 " if X11 forwarding is active, then starting Vim might take long without it
 "set clipboard=exclude:.* " not to try connecting to the X server's clipboard
