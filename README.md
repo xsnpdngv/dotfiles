@@ -31,3 +31,22 @@ Basic configuration files for convenient terminal usage.
 `Ctrl-N` - Toggle directory tree (`:NERDTreeToggle` - NERDTree plugin)
 
 etc.
+
+## .gvimrc
+
+### Features
+
+- GUI font and color scheme setting
+- Window sizing and positioning
+- Toolbar, Menubar, Scrollbar removal
+
+
+## Install
+
+In order to place `.vimrc` and `.gvimrc` and install plugin
+handling and used plugins, execute `vinstall.sh`. The script
+does not care about the shell profile files.
+
+```bash
+vinstall.sh
+```

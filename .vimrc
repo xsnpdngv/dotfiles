@@ -82,11 +82,9 @@ endif
 command UU w ++ff=unix
 
 " Run Vim plugin manager: ~/.vim/autoload/pathogen.vim
-" See:
-"     https://github.com/tpope/vim-pathogen
-" Install:
-"     mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-"     curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+" See: https://github.com/tpope/vim-pathogen
+" Install: mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+"          curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 " Plugin packages go to ~/.vim/bundle
 " Standalone .vim plugins go to ~/.vim/plugin
 try
