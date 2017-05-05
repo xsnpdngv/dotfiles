@@ -1,7 +1,7 @@
 " ==========================================================================
-" File:          .vimrc
+" File:          .vimrc  
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  April 30, 2017
+" Last Changed:  May 5, 2017
 " ==========================================================================
 
 set nocompatible  " enable Vim specific settings (instead of vi compatible mode)
@@ -58,9 +58,9 @@ set expandtab      " convert tabs to spaces
 "set paste          " paste from other application w/o indenting
 set pastetoggle=<F2> " set F2 to toggle paste mode
 
-" visualize tabs and trails (turns off/on with <tab> in command mode)
+" visualize tabs and trails (turns off/on with <Shift-Tab> in command mode)
 set list listchars=tab:»\ ,trail:·
-nnoremap <Tab> :set list!<CR>
+nnoremap <S-Tab> :set list!<CR>
 
 " use indentation based folding (\ in command mode opens/closes fold)
 set foldmethod=indent foldlevel=99
@@ -78,5 +78,34 @@ if has('mouse')
   set mousemodel=popup " right mouse button pops up a menu, like in Windows
 endif
 
-" add command :UU to convert to unix file format
+" add command :UU to convert to unix file format (and save it)
 command UU w ++ff=unix
+
+" Run Vim plugin manager: ~/.vim/autoload/pathogen.vim
+" See:
+"     https://github.com/tpope/vim-pathogen
+" Install:
+"     mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+"     curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+" Plugin packages go to ~/.vim/bundle
+" Standalone .vim plugins go to ~/.vim/plugin
+try
+  execute pathogen#infect()
+catch
+  " comment it out if warning is annoying
+  echo "No pathogen is installed, plugin bundles won't work"
+endtry
+
+" NERDTree is a directory tree plugin, install (for pathogen) by:
+" git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+" map Ctrl-N to toggle NERDTree
+nnoremap <C-n> :NERDTreeToggle<CR>
+" map Tab to change window
+nnoremap <Tab> <C-w><C-w>
+
+" use molokai color scheme if available, that can be installed with:
+" git clone https://github.com/tomasr/molokai ~/.vim/bundle/molokai
+try
+  colorscheme molokai
+catch
+endtry
