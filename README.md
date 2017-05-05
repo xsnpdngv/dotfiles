@@ -1,6 +1,6 @@
 # Personal settings
 
-Basic configuration files for convenient terminal usage.
+Basic configuration files for convenient terminal usage, mainly for Vim.
 
 ## .vimrc
 
@@ -34,7 +34,7 @@ etc.
 
 ## .gvimrc
 
-### Features
+### Features
 
 - GUI font and color scheme setting
 - Window sizing and positioning
