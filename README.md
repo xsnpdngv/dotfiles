@@ -1,12 +1,10 @@
-Personal settings
-=================
+# Personal settings
 
 Basic configuration files for convenient terminal usage.
 
-.vimrc
-------
+## .vimrc
 
-### Features
+### Features  
 
 - Improved search
 - Syntax highlighting
@@ -24,12 +22,12 @@ Basic configuration files for convenient terminal usage.
 - Plugin handling (Pathogen)
 - Color scheme setting (Molokai plugin)
 
-### Mappings
+### Mappings
 
-`F2` - paste toggle 
-`/` - open/close fold (`za`)
-`Tab` - change window (`C-w-w`)
-`Shift-Tab` - Toggle trailing whitespace indication
+`F2` - paste toggle  
+`/` - open/close fold (`za`)  
+`Tab` - change window (`C-w-w`)  
+`Shift-Tab` - Toggle trailing whitespace indication  
 `Ctrl-N` - Toggle directory tree (`:NERDTreeToggle` - NERDTree plugin)
 
 etc.
