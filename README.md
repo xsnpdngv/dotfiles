@@ -4,7 +4,7 @@ Basic configuration files for convenient terminal and Vim usage.
 Beyond the following feauture listings, each file has extensive comments
 on settings.
 
-## .bashrc
+## .bashrc
 
 Default `.bashrc` file with some additions:
 
