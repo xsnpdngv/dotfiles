@@ -1,7 +1,7 @@
 " ==========================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  May 5, 2017
+" Last Changed:  May 6, 2017
 " ==========================================================================
 
 set nocompatible  " enable Vim specific settings (instead of vi compatible mode)
@@ -41,6 +41,20 @@ if has("autocmd")
 
   " for all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
+
+  " function for restoring cursor position
+  function! ResCur()
+    if line("'\"") <= line("$")
+      normal! g`"
+      return 1
+    endif
+  endfunction
+  " restore cursor position
+  augroup resCur
+    autocmd!
+    autocmd BufWinEnter * call ResCur()
+  augroup END
+
 else
   set autoindent
 endif

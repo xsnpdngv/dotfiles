@@ -28,14 +28,15 @@ use.
 - Improved search
 - Syntax highlighting
 - Filetype based automatic indentation
-- Unix file type default
+- Unix file type as default
 - No swap file usage
 - UTF-8 encoding
 - Text width defintion
 - Overlength indication
 - Usage of 4 spaces as tabs
 - One key paste toggling
-- Switchable indication for trailing tabs and spaces
+- Cursor position restoration
+- Switchable indication for tabs and trailing spaces
 - Clipboard usage as default register
 - Mouse enablement even in terminal
 - Plugin handling (Pathogen)
