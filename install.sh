@@ -1,12 +1,15 @@
 #!/bin/sh
 # ==========================================================================
 # @file    vinstall.sh
-# @brief   shell script to install .vimrc and related plugins
+# @brief   shell script to install profile, .vimrc and vim plugins
 # @author  Tamas Dezso <dezso.t.tamas@gmail.com>
-# @date    May 5, 2017
+# @date    May 6, 2017
 # ==========================================================================
 
-# copy .vimrc and .gvimrc to their place
+# copy profile (.bashrc, .profile)
+cp -i .bashrc .profile ~/
+
+# copy .vimrc and .gvimrc
 cp -i .vimrc .gvimrc ~/
 
 # install plugin autoloader: pathogen

@@ -15,26 +15,3 @@ if [ -n "$BASH_VERSION" ]; then
     . "$HOME/.bashrc"
     fi
 fi
-
-# set PATH so it includes user's private bin if it exists and .
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-PATH=.:$PATH
-
-# set Vim as the visual editor
-export VISUAL=vim
-export EDITOR="$VISUAL"
-
-# set development environment
-export PREFIX=/project
-export LIB=$PREFIX/lib
-export INCLUDE=$PREFIX/include
-
-# set shared library PATH
-export LD_LIBRARY_PATH=$LIB:$LD_LIBRARY_PATH
-
-# set locale
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export LANG=en_EN.UTF-8

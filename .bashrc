@@ -56,10 +56,12 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# define a function to get the actual git branch
 gitbr() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\|\1/'
 }
 
+# set prompt
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(gitbr)\$ '
 else
@@ -89,13 +91,13 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias vi=vim
+alias vi='vim'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -105,7 +107,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -121,17 +122,22 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# set PATH so it includes user's private bin directories
+# set PATH so it includes current working and user's private bin directories
 PATH=".:$HOME/bin:$HOME/.local/bin:$PATH"
 
 # set Vim as the visual editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-# set development environment
+# set include and library environment variables
 export PREFIX=$HOME
 export LIB=$PREFIX/lib
 export INCLUDE=$PREFIX/include
 
-# set shared library PATH
-export LD_LIBRARY_PATH=$LIB
+# add LIB to shared library PATH
+export LD_LIBRARY_PATH=$LIB:$LD_LIBRARY_PATH
+
+# set locale
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_EN.UTF-8
