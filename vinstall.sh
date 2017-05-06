@@ -12,7 +12,7 @@ cp -i .vimrc .gvimrc ~/
 # install plugin autoloader: pathogen
 # see: https://github.com/tpope/vim-pathogen
 # remember to put `pathogen#infect()` to .vimrc to have plugins autoloaded
-if [ -f ~/.vim/autoload/pathogen.vim ]
+if [ ! -f ~/.vim/autoload/pathogen.vim ]
 then
     # check if curl is available
     command -v curl >/dev/null || { echo "Missing curl. Aborting."; exit 1; }
