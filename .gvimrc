@@ -1,7 +1,8 @@
 "set guifont=Monospace
 set guifont=Consolas
 "colorscheme desert
-colorscheme darkblue
+"colorscheme darkblue
+colorscheme molokai
 set columns=80 "number of columns
 set lines=40   "number of lines
 winpos 700 150 "window position

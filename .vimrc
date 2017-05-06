@@ -9,9 +9,21 @@ set nowritebackup " do not write backup
 set noswapfile    " do not use swap file
 set ff=unix       " use unix file format
 
-" use clipboard as the unnamed register, so Yank-Put cross-works between
-" different Vim instances
-set clipboard=unnamedplus
+" Use clipboard as the unnamed '+' register, so Yank-Put cross-works between
+" different Vim instances and other programs too
+"
+" This requires +clipboard feature which is not obvious to have, check it by
+" `vim --version`. In case of -clipboard another version of Vim might worth
+" considering e.g., vim-gnome, vim-athena, vim-gtx
+" MacOS: brew install vim --with-client-server
+"
+" Since the clipboard belongs to the windowing system, in case of remote
+" sessions it requires X11 forwarding even for pure terminal use (ssh -Y)
+" MacOS: The X server (XQuartz), should have all Pasteboard options to be
+" enabled under Preferences
+if has('clipboard')
+  set clipboard=unnamedplus
+endif
 
 " if X11 forwarding is active, then starting Vim might take long without it
 "set clipboard=exclude:.* " not to try connecting to the X server's clipboard
@@ -68,12 +80,17 @@ nnoremap \ za
 
 " enable mouse in terminal emulators if in insert mode
 if has('mouse')
-  set mouse=a
   " Set mouse to work in all modes, resulting easy positioning by clicking and
   " easy Visual mode selection. However, by easy Visual mode selection, default
   " terminal mouse behavior is lost. Default terminal mode mouse behavior can be
-  " achieved by pressing <Shift> while both selecting and clicking.
-  " Copy-Paste also works for the selection with Ctrl+Shift+C-Ctrl+Shit+V.
+  " achieved by pressing <Shift> during clicking (selection).
+  " Copy-Paste also works for the selection with Ctrl+Shift+C - Ctrl+Shit+V.
+  " MacOS: To temporarily bypass Mouse Reporting and interact with the terminal
+  " view, press the <Fn> modifier key while clicking or scrolling. There is also
+  " a View > Allow Mouse Reporting (⌘R) menu item you can use to bypass Mouse
+  " Reporting for longer periods of time, or if the modifier key isn't
+  " available.
+  set mouse=a
   set mousehide " hide mouse while typing
   set mousemodel=popup " right mouse button pops up a menu, like in Windows
 endif
@@ -81,8 +98,8 @@ endif
 " add command :UU to convert to unix file format (and save it)
 command UU w ++ff=unix
 
-" Run Vim plugin manager: ~/.vim/autoload/pathogen.vim
-" See: https://github.com/tpope/vim-pathogen
+" Run Vim plugin autoloader: ~/.vim/autoload/pathogen.vim
+" See:     https://github.com/tpope/vim-pathogen
 " Install: mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 "          curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 " Plugin packages go to ~/.vim/bundle
