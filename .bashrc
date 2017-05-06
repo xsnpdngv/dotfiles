@@ -63,7 +63,13 @@ gitbr() {
 
 # set prompt
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[0;35m\]$(gitbr)\[\033[00m\]\$ '
+    RESET="\[\033[0m\]"
+    RED="\[\033[0;31m\]"
+    GREEN="\[\033[01;32m\]"
+    BLUE="\[\033[01;34m\]"
+    YELLOW="\[\033[0;33m\]"
+    PURPLE="\[\033[0;35m\]"
+    PS1="${debian_chroot:+($debian_chroot)}$GREEN\u@\h$RESET:$BLUE\w$PURPLE\$(gitbr)$RESET\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(gitbr)\$ '
 fi
