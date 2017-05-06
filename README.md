@@ -1,17 +1,20 @@
 # Personal settings
 
-Basic configuration files for convenient terminal and Vim usage
+Basic configuration files for convenient terminal and Vim usage.
+Beyond the following feauture listings, each file has extensive comments
+on settings.
 
 ## .bashrc
 
 Default `.bashrc` file with some additions:
 
 - Fancy color prompt with Git branch indication in it
-- `PATH` to have `.`, `~/bin` and `~/.local/bin`
-- Environment variables `INCLUDE` and `LIB` set to `~/include` and `~/lib`
+- Vim as default visual editor
+- Vi editing mode for the command line
+- `PATH` includes `.`, `~/bin` and `~/.local/bin`
+- `INCLUDE` and `LIB` environment variables to set to `~/include` and `~/lib`
   accordingly
 - `LIB` to complete `LD_LIBRARY_PATH`, so shared libraries here will be found
-- Vim to set as default visual editor
 - Set locale to `en_US.UTF-8`
 
 ## .bash_profile

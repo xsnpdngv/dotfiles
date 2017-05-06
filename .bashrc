@@ -97,6 +97,7 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias gpg='gpg2'
 alias vi='vim'
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -128,6 +129,9 @@ PATH=".:$HOME/bin:$HOME/.local/bin:$PATH"
 # set Vim as the visual editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+# set vi editing mode for the command line too
+set -o vi
 
 # set include and library environment variables
 export PREFIX=$HOME
