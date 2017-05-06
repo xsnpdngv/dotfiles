@@ -14,7 +14,7 @@ Default `.bashrc` file with some additions:
 - Vim to set as default visual editor
 - Set locale to `en_US.UTF-8`
 
-## .profile
+## .bash_profile
 
 Includes `.bashrc` to have everything in one place for either terminal or X11
 use.
@@ -55,7 +55,7 @@ use.
 
 ## Install
 
-In order to copy `.bashrc`, `.profile`, `.vimrc` and `.gvimrc`
+In order to copy `.bashrc`, `.bash_profile`, `.vimrc` and `.gvimrc`
 to their destinations and install Vim plugin handling and used plugins, execute
 `install.sh`. The script does not overwrite anything without asking so.
 
