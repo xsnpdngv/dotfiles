@@ -69,7 +69,8 @@ if [ "$color_prompt" = yes ]; then
     BLUE="\[\033[01;34m\]"
     YELLOW="\[\033[0;33m\]"
     PURPLE="\[\033[0;35m\]"
-    PS1="${debian_chroot:+($debian_chroot)}$GREEN\u@\h$RESET:$BLUE\w$PURPLE\$(gitbr)$RESET\$ "
+    PS1="${debian_chroot:+($debian_chroot)}$GREEN\u@\h$RESET:"
+    PS1="$PS1$BLUE\W$PURPLE\$(gitbr)$RESET\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(gitbr)\$ '
 fi
