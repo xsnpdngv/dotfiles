@@ -12,7 +12,7 @@ Default `.bashrc` file with some additions:
 - Vim as default visual editor
 - Vi editing mode for the command line
 - `PATH` includes `.`, `~/bin` and `~/.local/bin`
-- `INCLUDE` and `LIB` environment variables to set to `~/include` and `~/lib`
+- `INCLUDE` and `LIB` environment variables set to `~/include` and `~/lib`
   accordingly
 - `LIB` to complete `LD_LIBRARY_PATH`, so shared libraries here will be found
 - Set locale to `en_US.UTF-8`
@@ -60,8 +60,9 @@ use.
 ## Install
 
 In order to copy `.bashrc`, `.bash_profile`, `.vimrc` and `.gvimrc`
-to their destinations and install Vim plugin handling and used plugins, execute
-`install.sh`. The script does not overwrite anything without asking so.
+to their standard locations (`~/`) and install Vim plugin handling and used
+plugins under `~/.vim/`, execute `install.sh`. The script does not overwrite
+anything without asking so.
 
 ```bash
 ./install.sh
