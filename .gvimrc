@@ -1,5 +1,5 @@
 "set guifont=Monospace
-set guifont=Consolas
+"set guifont=Consolas
 "colorscheme desert
 "colorscheme darkblue
 colorscheme molokai
