@@ -1,7 +1,7 @@
 " ==========================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  May 6, 2017
+" Last Changed:  May 8, 2017
 " ==========================================================================
 
 set nocompatible  " enable Vim specific settings (instead of vi compatible mode)
