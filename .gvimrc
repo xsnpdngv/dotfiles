@@ -1,13 +1,13 @@
-"set guifont=Monospace
-"set guifont=Consolas
-"colorscheme desert
-"colorscheme darkblue
-colorscheme molokai
-set columns=80 "number of columns
-set lines=40   "number of lines
-winpos 700 150 "window position
+"silent! set guifont=Monospace
+"silent! set guifont=Consolas
+"silent! colorscheme desert
+"silent! colorscheme darkblue
+silent! colorscheme molokai
+silent! set columns=80 "number of columns
+silent! set lines=40   "number of lines
+silent! winpos 700 150 "window position
 
-"set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-set guioptions-=r  "remove right-hand scroll bar
-set guioptions-=L  "remove left-hand scroll bar
+"silent! set guioptions-=m  "remove menu bar
+silent! set guioptions-=T  "remove toolbar
+silent! set guioptions-=r  "remove right-hand scroll bar
+silent! set guioptions-=L  "remove left-hand scroll bar

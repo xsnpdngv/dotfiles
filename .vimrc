@@ -118,23 +118,15 @@ command UU w ++ff=unix
 "          curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 " Plugin packages go to ~/.vim/bundle
 " Standalone .vim plugins go to ~/.vim/plugin
-try
-  execute pathogen#infect()
-catch
-  " comment it out if warning is annoying
-  echo "No pathogen is installed, plugin bundles won't work"
-endtry
+silent! execute pathogen#infect()
 
 " NERDTree is a directory tree plugin, install (for pathogen) by:
 " git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 " map Ctrl-N to toggle NERDTree
-nnoremap <C-n> :NERDTreeToggle<CR>
+silent! nnoremap <C-n> :NERDTreeToggle<CR>
 " map Tab to change window
-nnoremap <Tab> <C-w><C-w>
+silent! nnoremap <Tab> <C-w><C-w>
 
 " use molokai color scheme if available, that can be installed with:
 " git clone https://github.com/tomasr/molokai ~/.vim/bundle/molokai
-try
-  colorscheme molokai
-catch
-endtry
+silent! colorscheme molokai
