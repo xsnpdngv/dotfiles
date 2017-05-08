@@ -1,13 +1,13 @@
 #!/bin/sh
 # ==========================================================================
 # @file    vinstall.sh
-# @brief   shell script to install bash profile, .vimrc and Vim plugins
+# @brief   shell script to install bash profile, Vim config and plugins
 # @author  Tamas Dezso <dezso.t.tamas@gmail.com>
-# @date    May 6, 2017
+# @date    May 8, 2017
 # ==========================================================================
 
-# copy profile (.bashrc, .profile)
-cp -i .bashrc .bash_profile ~/
+# copy bash profile
+cp -i .bash* ~/
 
 # copy .vimrc and .gvimrc
 cp -i .vimrc .gvimrc ~/

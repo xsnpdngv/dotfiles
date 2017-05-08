@@ -34,7 +34,7 @@ use.
 - Text width defintion
 - Overlength indication
 - Usage of 4 spaces as tabs
-- One key paste toggling
+- One key paste-toggling
 - Cursor position restoration
 - Switchable indication for tabs and trailing spaces
 - Clipboard usage as default register
@@ -59,10 +59,11 @@ use.
 
 ## Install
 
-In order to copy `.bashrc`, `.bash_profile`, `.vimrc` and `.gvimrc`
-to their standard locations (`~/`) and install Vim plugin handling and used
-plugins under `~/.vim/`, execute `install.sh`. The script does not overwrite
-anything without asking so.
+In order to copy bash profile files (`bashrc`, `.bash_profile`,
+`.bash_aliases`) and Vim configurations (`.vimrc`, `.gvimrc`) to their
+standard locations (`~/`) and install Vim plugin handler (`pathogen`) and used
+plugins (`NERDTree`, `Molokai`) under `~/.vim/`, execute `install.sh`. The
+script does not overwrite anything without asking so.
 
 ```bash
 ./install.sh
