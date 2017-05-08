@@ -59,7 +59,7 @@ use.
 
 ## Install
 
-In order to copy bash profile files (`bashrc`, `.bash_profile`,
+In order to copy bash profile files (`.bashrc`, `.bash_profile`,
 `.bash_aliases`) and Vim configurations (`.vimrc`, `.gvimrc`) to their
 standard locations (`~/`) and install Vim plugin handler (`pathogen`) and used
 plugins (`NERDTree`, `Molokai`) under `~/.vim/`, execute `install.sh`. The
