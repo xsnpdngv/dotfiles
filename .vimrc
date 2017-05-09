@@ -1,7 +1,7 @@
 " ==========================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  May 8, 2017
+" Last Changed:  May 10, 2017
 " ==========================================================================
 
 set nocompatible  " enable Vim specific settings (instead of vi compatible mode)
@@ -23,10 +23,13 @@ set ff=unix       " use unix file format
 " enabled under Preferences
 if has('clipboard')
   set clipboard=unnamedplus
-endif
 
-" if X11 forwarding is active, then starting Vim might take long without it
-"set clipboard=exclude:.* " not to try connecting to the X server's clipboard
+  " If X11 forwarding is active and the connection is slow, the process of
+  " Vim connecting to the clipboard becomes slow too, resulting delayed
+  " startup. Excluding the clipboard will solve this, but obviously the
+  " assignment of the unnamedplus register to it will brake.
+  "clipboard=exclude:.* " not to try connecting to the X server's clipboard
+endif
 
 " Get rid of the delay when pressing O (for example)
 " http://stackoverflow.com/questions/2158516/vim-delay-before-o-opens-a-new-line
