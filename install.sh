@@ -1,9 +1,9 @@
 #!/bin/bash
 # ==========================================================================
-# @file    vinstall.sh
+# @file    install.sh
 # @brief   shell script to install bash profile, Vim config and plugins
 # @author  Tamas Dezso <dezso.t.tamas@gmail.com>
-# @date    May 8, 2017
+# @date    May 10, 2017
 # ==========================================================================
 
 # copy bash profile
