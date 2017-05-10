@@ -40,7 +40,6 @@ use.
 - Clipboard usage as default register
 - Mouse enablement even in terminal
 - Plugin handling (Pathogen)
-- Color scheme setting (Molokai plugin)
 
 ### Mappings
 
@@ -62,8 +61,9 @@ use.
 In order to copy bash profile files (`.bashrc`, `.bash_profile`,
 `.bash_aliases`) and Vim configurations (`.vimrc`, `.gvimrc`) to their
 standard locations (`~/`) and install Vim plugin handler (`pathogen`) and used
-plugins (`NERDTree`, `Molokai`) under `~/.vim/`, execute `install.sh`. The
-script does not overwrite anything without asking so.
+plugins (`NERDTree`, `Molokai`, `C++ Enhanced Syntax Highlight`) under
+`~/.vim/`, execute `install.sh`. The script does not overwrite anything without
+asking so.
 
 ```bash
 ./install.sh
