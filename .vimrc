@@ -22,13 +22,13 @@ set ff=unix       " use unix file format
 " MacOS: The X server (XQuartz), should have all Pasteboard options to be
 " enabled under Preferences
 if has('clipboard')
-  set clipboard=unnamedplus
+  set clipboard=unnamed,unnamedplus,autoselect
 
-  " If X11 forwarding is active and the connection is slow, the process of
-  " Vim connecting to the clipboard becomes slow too, resulting delayed
-  " startup. Excluding the clipboard will solve this, but obviously the
-  " assignment of the unnamedplus register to it will brake.
-  "clipboard=exclude:.* " not to try connecting to the X server's clipboard
+  " If X11 forwarding is active and the connection is slow, the process of Vim
+  " connecting to the clipboard becomes slow too, resulting delayed startup.
+  " Excluding the clipboard will solve this, but obviously the assignment of
+  " the unnamedplus register to it will brake.
+  "set clipboard=exclude:.* " not to try connecting to the X server's clipboard
 endif
 
 " Get rid of the delay when pressing O (for example)

@@ -17,7 +17,7 @@ VIM=$HOME/.vim
 PLUGINS=(
     "https://github.com/scrooloose/nerdtree"              # file tree explorer
     "https://github.com/tomasr/molokai"                   # dark color scheme
-    "https://github.com/octol/vim-cpp-enhanced-highlight" # C++ higlight
+    "https://github.com/octol/vim-cpp-enhanced-highlight" # C++ highlight
 )
 
 # install plugin autoloader pathogen (if not yet present)
