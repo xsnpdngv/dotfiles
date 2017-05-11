@@ -15,12 +15,14 @@ set ff=unix       " use unix file format
 " This requires +clipboard feature which is not obvious to have, check it by
 " `vim --version`. In case of -clipboard another version of Vim might worth
 " considering e.g., vim-gnome, vim-athena, vim-gtx
-" MacOS: brew install vim --with-client-server
+" MacOS: brew install macvim --with-override-system-vim
+"     OR brew install vim --with-client-server
 "
 " Since the clipboard belongs to the windowing system, in case of remote
 " sessions it requires X11 forwarding even for pure terminal use (ssh -Y)
-" MacOS: The X server (XQuartz), should have all Pasteboard options to be
-" enabled under Preferences
+" MacOS: MacVim is able to access the clipboard natively w/o X server running
+" but for other cases XQuartz should have all Pasteboard options to be
+" enabled under its Preferences
 if has('clipboard')
   set clipboard=unnamed,unnamedplus,autoselect
 

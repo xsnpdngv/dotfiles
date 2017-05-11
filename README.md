@@ -31,7 +31,7 @@ use.
 - Unix file type as default
 - No swap file usage
 - UTF-8 encoding
-- Text width defintion
+- Text width definition
 - Overlength indication
 - Usage of 4 spaces as tabs
 - One key paste-toggling
@@ -60,8 +60,8 @@ use.
 
 In order to copy bash profile files (`.bashrc`, `.bash_profile`,
 `.bash_aliases`) and Vim configurations (`.vimrc`, `.gvimrc`) to their
-standard locations (`~/`) and install Vim plugin handler (`pathogen`) and used
-plugins (`NERDTree`, `Molokai`, `C++ Enhanced Syntax Highlight`) under
+standard locations (`~/`) and install Vim plugin handler (`pathogen`) along wit
+used plugins (`NERDTree`, `Molokai`, `C++ Enhanced Syntax Highlight`) under
 `~/.vim/`, execute `install.sh`. The script does not overwrite anything without
 asking so.
 
