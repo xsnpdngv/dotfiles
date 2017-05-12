@@ -3,7 +3,7 @@
 # @file    install.sh
 # @brief   shell script to install bash profile, Vim config and plugins
 # @author  Tamas Dezso <dezso.t.tamas@gmail.com>
-# @date    May 10, 2017
+# @date    May 12, 2017
 # ==========================================================================
 
 # copy bash profile
@@ -33,7 +33,7 @@ then
     curl -LSso $VIM/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 fi
 
-# install plugins by cloning them from github (if not yet cloned)
+# install plugins by cloning them from GitHub (if not yet done and wanted to)
 for PLUGIN in "${PLUGINS[@]}"; do
     DESTDIR=$VIM/bundle/${PLUGIN##*\/}
     if [ ! -d "$DESTDIR" ]
