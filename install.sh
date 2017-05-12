@@ -18,6 +18,7 @@ PLUGINS=(
     "https://github.com/scrooloose/nerdtree"              # file tree explorer
     "https://github.com/tomasr/molokai"                   # dark color scheme
     "https://github.com/octol/vim-cpp-enhanced-highlight" # C++ highlight
+    "https://github.com/plasticboy/vim-markdown"          # Markdown highlight
 )
 
 # install plugin autoloader pathogen (if not yet present)
@@ -35,5 +36,11 @@ fi
 # install plugins by cloning them from github (if not yet cloned)
 for PLUGIN in "${PLUGINS[@]}"; do
     DESTDIR=$VIM/bundle/${PLUGIN##*\/}
-    [ -d "$DESTDIR" ] || git clone $PLUGIN $DESTDIR
+    if [ ! -d "$DESTDIR" ]
+    then
+        echo -n "Install Vim plugin: $PLUGIN? (y/n [n]) "
+        read is_install
+        [ "$is_install" = "y" -o "$is_install" = "Y" ] && \
+        git clone $PLUGIN $DESTDIR
+    fi
 done
