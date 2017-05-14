@@ -69,9 +69,9 @@ use.
     - .bash_aliases
     - .vimrc
     - .gvimrc
-- Vim plugin autoloader download to `$HOME/.vim/autoload/pathogen.vim`:
+- Vim plugin autoloader download to `$HOME/.vim/autoload/`:
     - [Pathogen](https://tpo.pe/pathogen.vim)
-- Vim plugin cloning from GitHub to `$GOME/.vim/bundle/`:
+- Vim plugin cloning from GitHub to `$HOME/.vim/bundle/`:
     - [NERDTree File Tree Explorer](https://github.com/scrooloose/nerdtree)
     - [Molokai Color Scheme](https://github.com/tomasr/molokai)
     - [C++ Enhanced Syntax Highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
