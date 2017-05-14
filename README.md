@@ -1,45 +1,45 @@
-# Personal settings
+# Personal profile settings
 
-Basic configuration files for convenient terminal and Vim usage.
-Beyond the following feauture listings, each file has extensive comments
+Continuously changing configuration files for convenient terminal and Vim
+usage. Beyond the following feauture listings, each file has extensive comments
 on settings.
 
 ## .bashrc
 
-Default `.bashrc` file with some additions:
+Default `.bashrc` file with additions to set:
 
-- Fancy color prompt with Git branch indication in it
+- Fancy color prompt with Git branch indication
 - Vim as default visual editor
 - Vi editing mode for the command line
-- `PATH` includes `.`, `~/bin` and `~/.local/bin`
-- `INCLUDE` and `LIB` environment variables set to `~/include` and `~/lib`
-  accordingly
+- `$PATH` to include `.`, `~/bin` and `~/.local/bin`
+- `$INCLUDE` and `$LIB` to `~/include` and `~/lib` accordingly
 - `LIB` to complete `LD_LIBRARY_PATH`, so shared libraries here will be found
-- Set locale to `en_US.UTF-8`
+- Locale to `en_US.UTF-8`
 
 ## .bash_profile
 
 Includes `.bashrc` to have everything in one place for either terminal or X11
 use.
 
-
 ## .vimrc
 
 - Improved search
-- Syntax highlighting
-- Filetype based automatic indentation
-- Unix file type as default
-- No swap file usage
+- Filetype based
+    - syntax highlighting
+    - Automatic indentation
+- Unix file format
 - UTF-8 encoding
-- Text width definition
+- No swap file
+- Text width preset
 - Overlength indication
-- Usage of 4 spaces as tabs
+- 4 spaces for tabs
 - One key paste-toggling
 - Cursor position restoration
-- Switchable indication for tabs and trailing spaces
-- Clipboard usage as default register
+- Indication for tabs and trailing spaces
+- X11 clipboard for copy-pasting
 - Mouse enablement even in terminal
-- Plugin handling (Pathogen)
+- Plugin autoloading (Pathogen)
+- Colorscheme setting (Molokai)
 
 ### Mappings
 
@@ -49,6 +49,7 @@ use.
 `Shift-Tab` - Toggle trailing whitespace indication  
 `Ctrl-N` - Toggle directory tree (`:NERDTreeToggle` - NERDTree plugin)
 
+
 ## .gvimrc
 
 - GUI font and color scheme setting
@@ -56,15 +57,22 @@ use.
 - Toolbar, Menubar, Scrollbar removal
 
 
-## Install
-
-In order to copy bash profile files (`.bashrc`, `.bash_profile`,
-`.bash_aliases`) and Vim configurations (`.vimrc`, `.gvimrc`) to their
-standard locations (`~/`) and install Vim plugin handler (`pathogen`) along wit
-used plugins (`NERDTree`, `Molokai`, `C++ Enhanced Syntax Highlight`) under
-`~/.vim/`, execute `install.sh`. The script does not overwrite anything without
-asking so.
+## install.sh
 
 ```bash
 ./install.sh
 ```
+
+- Profile install to `$HOME` with prompt for overwrite:
+    - .bashrc
+    - .bash_profile
+    - .bash_aliases
+    - .vimrc
+    - .gvimrc
+- Vim plugin autoloader download to `$HOME/.vim/autoload/pathogen.vim`:
+    - [Pathogen](https://tpo.pe/pathogen.vim)
+- Vim plugin cloning from GitHub to `$GOME/.vim/bundle/`:
+    - [NERDTree File Tree Explorer](https://github.com/scrooloose/nerdtree)
+    - [Molokai Color Scheme](https://github.com/tomasr/molokai)
+    - [C++ Enhanced Syntax Highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
+    - [Markdown Syntax Highlight](https://github.com/plasticboy/vim-markdown)
