@@ -30,6 +30,7 @@ use.
 - Unix file format
 - UTF-8 encoding
 - No swap file
+- Persistent undo
 - Text width preset
 - Overlength indication
 - 4 spaces for tabs

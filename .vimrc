@@ -117,6 +117,15 @@ endif
 " add command :UU to convert to unix file format (and save it)
 command UU w ++ff=unix
 
+" persistent undo
+if !isdirectory($HOME."/.vim/undodir")
+    call mkdir($HOME."/.vim/undodir", "p")
+endif
+set undodir=$HOME/.vim/undodir
+set undofile
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer reload
+
 " Run Vim plugin autoloader: ~/.vim/autoload/pathogen.vim
 " See:     https://github.com/tpope/vim-pathogen
 " Install: mkdir -p ~/.vim/autoload ~/.vim/bundle && \
