@@ -1,7 +1,7 @@
 " ==========================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  May 18, 2017
+" Last Changed:  May 24, 2017
 " ==========================================================================
 
 set nocompatible  " enable Vim specific settings (instead of vi compatible mode)
@@ -134,6 +134,9 @@ set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 " Standalone .vim plugins go to ~/.vim/plugin
 silent! execute pathogen#infect()
 
+" disable folding for vim-markdown to speed up on larger docs
+let g:vim_markdown_folding_disabled = 1
+
 " NERDTree is a directory tree plugin, install (for pathogen) by:
 " git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 " map Ctrl-N to toggle NERDTree
@@ -144,3 +147,4 @@ silent! nnoremap <Tab> <C-w><C-w>
 " use molokai color scheme if available, that can be installed with:
 " git clone https://github.com/tomasr/molokai ~/.vim/bundle/molokai
 silent! colorscheme molokai
+
