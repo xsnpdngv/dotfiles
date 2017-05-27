@@ -38,7 +38,7 @@ for PLUGIN in "${PLUGINS[@]}"; do
     DESTDIR=$VIM/bundle/${PLUGIN##*\/}
     if [ ! -d "$DESTDIR" ]
     then
-        echo -n "Install Vim plugin: $PLUGIN? (y/n [n]) "
+        echo -n "Install Vim plugin: $PLUGIN? (y/N) "
         read is_install
         [ "$is_install" = "y" -o "$is_install" = "Y" ] && \
         git clone $PLUGIN $DESTDIR

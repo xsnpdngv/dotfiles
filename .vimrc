@@ -5,8 +5,8 @@
 " ==========================================================================
 
 set nocompatible  " enable Vim specific settings (instead of vi compatible mode)
-set nowritebackup " do not write backup
-set noswapfile    " do not use swap file
+"set nowritebackup " do not write backup
+"set noswapfile    " do not use swap file
 set ff=unix       " use unix file format
 
 " Use clipboard as the unnamed '+' register, so Yank-Put cross-works between

@@ -29,7 +29,6 @@ use.
     - Automatic indentation
 - Unix file format
 - UTF-8 encoding
-- No swap file
 - Persistent undo
 - Text width preset
 - Overlength indication
