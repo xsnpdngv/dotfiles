@@ -135,7 +135,7 @@ set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 silent! execute pathogen#infect()
 
 " disable folding for vim-markdown to speed up on larger docs
-let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_disabled=1
 
 " NERDTree is a directory tree plugin, install (for pathogen) by:
 " git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
