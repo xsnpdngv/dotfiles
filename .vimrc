@@ -134,13 +134,17 @@ set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 " Standalone .vim plugins go to ~/.vim/plugin
 silent! execute pathogen#infect()
 
-" disable folding for vim-markdown to speed up on larger docs
+" vim-markdown is an enhanced syntax highlighting plugin, install (pathogen):
+" git clone https://github.com/plasticboy/vim-markdown ~/.vim/bundle/vim-markdown
+" Its folding feature on big files makes Vim slow, that's why it is disabled:
 let g:vim_markdown_folding_disabled=1
 
-" enable vim-airline
+" vim-airline is a fancy status line plugin, install (pathogen):
+" git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
+" To make the status line visible, laststatus needs to be set:
 silent! set laststatus=2
 
-" NERDTree is a directory tree plugin, install (for pathogen) by:
+" NERDTree is a directory tree plugin, install (pathogen):
 " git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 " map Ctrl-N to toggle NERDTree
 silent! nnoremap <C-n> :NERDTreeToggle<CR>
