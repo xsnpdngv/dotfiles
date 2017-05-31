@@ -1,7 +1,7 @@
 " ==========================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  May 24, 2017
+" Last Changed:  May 31, 2017
 " ==========================================================================
 
 set nocompatible  " enable Vim specific settings (instead of vi compatible mode)
@@ -136,6 +136,9 @@ silent! execute pathogen#infect()
 
 " disable folding for vim-markdown to speed up on larger docs
 let g:vim_markdown_folding_disabled=1
+
+" enable vim-airline
+silent! set laststatus=2
 
 " NERDTree is a directory tree plugin, install (for pathogen) by:
 " git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
