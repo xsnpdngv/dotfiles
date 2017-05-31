@@ -76,3 +76,4 @@ use.
     - [Molokai Color Scheme](https://github.com/tomasr/molokai)
     - [C++ Enhanced Syntax Highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
     - [Markdown Syntax Highlight](https://github.com/plasticboy/vim-markdown)
+    - [Vim-airline](https://github.com/bling/vim-airline)
