@@ -93,6 +93,9 @@ set pastetoggle=<F2> " set F2 to toggle paste mode
 set list listchars=tab:»\ ,trail:·
 nnoremap <S-Tab> :set list!<CR>
 
+" keep 2 lines above and below the cursor visible when scrolling
+set scrolloff=2
+
 " use indentation based folding (\ in command mode opens/closes fold)
 set foldmethod=indent foldlevel=99
 nnoremap \ za
