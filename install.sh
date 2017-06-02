@@ -6,11 +6,14 @@
 # @date    May 31, 2017
 # ==========================================================================
 
-# copy bash profile
-cp -i .bash* ~/
-
-# copy .vimrc and .gvimrc
-cp -i .vimrc .gvimrc ~/
+if [ $# -eq 0 ]
+then
+    # copy bash and Vim profile
+    cp -i .bash* .vimrc .gvimrc ~/
+else
+    # copy files given as arguments
+    cp -i $@ ~/
+fi
 
 # set Vim configuration location and plugins to be installed
 VIM=$HOME/.vim
