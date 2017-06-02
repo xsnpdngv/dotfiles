@@ -47,6 +47,7 @@ use.
 `/` - open/close fold (`za`)  
 `Tab` - change window (`C-w-w`)  
 `Shift-Tab` - Toggle trailing whitespace indication  
+`Ctrl-L` - Format actual paragraph (`gqip`)  
 `Ctrl-N` - Toggle directory tree (`:NERDTreeToggle` - NERDTree plugin)
 
 

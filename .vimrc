@@ -1,7 +1,7 @@
 " ==========================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  May 31, 2017
+" Last Changed:  July 2, 2017
 " ==========================================================================
 
 set nocompatible  " enable Vim specific settings (instead of vi compatible mode)
@@ -95,6 +95,9 @@ nnoremap <S-Tab> :set list!<CR>
 
 " keep 2 lines above and below the cursor visible when scrolling
 set scrolloff=2
+
+" map gqip (format actual paragraph) to Ctrl+L
+nnoremap <C-L> gqip
 
 " use indentation based folding (\ in command mode opens/closes fold)
 set foldmethod=indent foldlevel=99
