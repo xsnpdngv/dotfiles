@@ -3,7 +3,7 @@
 # @file    install.sh
 # @brief   shell script to install bash profile, Vim config and plugins
 # @author  Tamas Dezso <dezso.t.tamas@gmail.com>
-# @date    May 31, 2017
+# @date    June 4, 2017
 # ==========================================================================
 
 if [ $# -eq 0 ]
@@ -23,6 +23,7 @@ PLUGINS=(
     "https://github.com/octol/vim-cpp-enhanced-highlight" # C++ highlight
     "https://github.com/plasticboy/vim-markdown"          # Markdown highlight
     "https://github.com/bling/vim-airline"                # Fancy status line
+    "https://github.com/tpope/vim-commentary"               # comment stuff out
 )
 
 # install plugin autoloader pathogen (if not yet present)

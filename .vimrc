@@ -47,19 +47,11 @@ if has("autocmd")
   " for all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
 
-  " function for restoring cursor position
-  function! ResCur()
-    if line("'\"") <= line("$")
-      normal! g`"
-      return 1
-    endif
-  endfunction
   " restore cursor position
-  augroup resCur
-    autocmd!
-    autocmd BufWinEnter * call ResCur()
-  augroup END
-
+  autocmd BufWinEnter *
+      \ if line("'\"") <= line("$") |
+      \   exe "normal g`\"" |
+      \ endif
 else
   set autoindent
 endif
