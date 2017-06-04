@@ -9,21 +9,21 @@
 if [ $# -eq 0 ]
 then
     # copy bash and Vim profile
-    cp -i .bash* .vimrc .gvimrc ~/
+    cp -i .bash* .vimrc .gvimrc $HOME/
 else
     # copy files given as arguments
-    cp -i $@ ~/
+    cp -i $@ $HOME/
 fi
 
 # set Vim configuration location and plugins to be installed
 VIM=$HOME/.vim
 PLUGINS=(
-    "https://github.com/scrooloose/nerdtree"              # file tree explorer
-    "https://github.com/tomasr/molokai"                   # dark color scheme
+    "https://github.com/scrooloose/nerdtree"              # File tree explorer
+    "https://github.com/tomasr/molokai"                   # Dark color scheme
     "https://github.com/octol/vim-cpp-enhanced-highlight" # C++ highlight
     "https://github.com/plasticboy/vim-markdown"          # Markdown highlight
     "https://github.com/bling/vim-airline"                # Fancy status line
-    "https://github.com/tpope/vim-commentary"               # comment stuff out
+    "https://github.com/tpope/vim-commentary"             # Comment stuff out
 )
 
 # install plugin autoloader pathogen (if not yet present)
