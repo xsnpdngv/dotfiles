@@ -41,7 +41,6 @@ if &t_Co > 2 || has("gui_running") " if terminal has colors
     syntax on     " syntax highlight
     set hlsearch  " search pattern highlight
     set incsearch " dynamic search pattern highlight
-    " mark first overlength character (@81)
 endif
 
 " ----- AUTOCOMMANDS --------------------------------------------------------
@@ -163,6 +162,6 @@ silent! colorscheme molokai
 
 " ----- AFTER ALL ------------------------------------------------------------
 
-" a plugin possibly would ruin it if set earlier
+" mark first overlength character (a plugin ruins it if set earlier)
 highlight OverLength ctermfg=white ctermbg=darkgrey
 match OverLength /\%81v./
