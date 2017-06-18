@@ -48,7 +48,6 @@ use.
 `Tab` - change window (`C-w-w`)  
 `Shift-Tab` - Toggle trailing whitespace indication  
 `Ctrl-L` - Format actual paragraph (`gqip`)  
-`Ctrl-N` - Toggle directory tree (`:NERDTreeToggle` - NERDTree plugin)
 
 
 ## .gvimrc
@@ -73,7 +72,6 @@ use.
 - Vim plugin autoloader download to `$HOME/.vim/autoload/`:
     - [Pathogen](https://tpo.pe/pathogen.vim)
 - Vim plugin cloning from GitHub to `$HOME/.vim/bundle/`:
-    - [NERDTree File Tree Explorer](https://github.com/scrooloose/nerdtree)
     - [Molokai Color Scheme](https://github.com/tomasr/molokai)
     - [C++ Enhanced Syntax Highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
     - [Markdown Syntax Highlight](https://github.com/plasticboy/vim-markdown)

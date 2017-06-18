@@ -3,7 +3,7 @@
 # @file    install.sh
 # @brief   shell script to install bash profile, Vim config and plugins
 # @author  Tamas Dezso <dezso.t.tamas@gmail.com>
-# @date    June 4, 2017
+# @date    June 18, 2017
 # ==========================================================================
 
 if [ $# -eq 0 ]
@@ -18,7 +18,6 @@ fi
 # set Vim configuration location and plugins to be installed
 VIM=$HOME/.vim
 PLUGINS=(
-    "https://github.com/scrooloose/nerdtree"              # File tree explorer
     "https://github.com/tomasr/molokai"                   # Dark color scheme
     "https://github.com/octol/vim-cpp-enhanced-highlight" # C++ highlight
     "https://github.com/plasticboy/vim-markdown"          # Markdown highlight

@@ -1,7 +1,7 @@
 " ============================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  June 4, 2017
+" Last Changed:  June 18, 2017
 " ============================================================================
 
 " ----- GENERAL --------------------------------------------------------------
@@ -41,6 +41,9 @@ if &t_Co > 2 || has("gui_running") " if terminal has colors
     syntax on     " syntax highlight
     set hlsearch  " search pattern highlight
     set incsearch " dynamic search pattern highlight
+    " mark first overlength character (@81)
+    highlight OverLength ctermfg=white ctermbg=darkgrey
+    match OverLength /\%81v./
 endif
 
 " ----- AUTOCOMMANDS --------------------------------------------------------
@@ -70,6 +73,9 @@ set pastetoggle=<F2>
 
 " <Ctrl+L> to format actual paragraph
 nnoremap <C-L> gqip
+
+" <Tab> to change window
+nnoremap <Tab> <C-w><C-w>
 
 " visualize tabs and trails
 set list listchars=tab:»\ ,trail:·
@@ -149,19 +155,6 @@ let g:vim_markdown_folding_disabled=1
 " To make the status line visible, laststatus needs to be set:
 silent! set laststatus=2
 
-" NERDTree is a directory tree plugin, install (pathogen):
-" cd ~/.vim/bundle && git clone https://github.com/scrooloose/nerdtree.git
-" <Ctrl+N> to toggle NERDTree
-silent! nnoremap <C-n> :NERDTreeToggle<CR>
-" <Tab> to change window
-silent! nnoremap <Tab> <C-w><C-w>
-
 " molokai color scheme to be used if available, install (pathogen):
 " cd ~/.vim/bundle && git clone https://github.com/tomasr/molokai
 silent! colorscheme molokai
-
-" ----- AFTER ALL ------------------------------------------------------------
-
-" mark first overlength character (a plugin ruins it if set earlier)
-highlight OverLength ctermfg=white ctermbg=darkgrey
-match OverLength /\%81v./
