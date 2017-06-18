@@ -35,6 +35,17 @@ set undofile
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
+function! ClearUndo()
+    let old_undolevels = &undolevels
+    set undolevels=-1
+    exe "normal a \<BS>\<Esc>"
+    let &undolevels = old_undolevels
+    unlet old_undolevels
+endfunction
+
+" Ctrl-U-X to clear undo history
+map <C-U><C-X> :call ClearUndo()<CR>
+
 " ----- COLORS --------------------------------------------------------------
 
 if &t_Co > 2 || has("gui_running") " if terminal has colors
@@ -161,6 +172,11 @@ let g:vim_markdown_folding_disabled=1
 " cd ~/.vim/bundle && git clone https://github.com/bling/vim-airline
 " To make the status line visible, laststatus needs to be set:
 silent! set laststatus=2
+
+" undotree is an undo tree visualizer plugin, install (pathogem):
+" cd ~/.vim/bundle && git clone https://github.com/mbbill/undotree
+" set :ut to do the same as :UndotreeToggle
+nnoremap <C-U><C-T> :UndotreeToggle<CR>
 
 " molokai color scheme to be used if available, install (pathogen):
 " cd ~/.vim/bundle && git clone https://github.com/tomasr/molokai

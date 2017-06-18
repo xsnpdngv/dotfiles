@@ -23,6 +23,7 @@ PLUGINS=(
     "https://github.com/plasticboy/vim-markdown"          # Markdown highlight
     "https://github.com/bling/vim-airline"                # Fancy status line
     "https://github.com/tpope/vim-commentary"             # Comment stuff out
+    "https://github.com/mbbill/undotree.git"              # Undotree visualizer
 )
 
 # install plugin autoloader pathogen (if not yet present)

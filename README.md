@@ -46,9 +46,10 @@ use.
 `F2` - paste toggle  
 `/` - open/close fold (`za`)  
 `Tab` - change window (`C-w-w`)  
-`Shift-Tab` - Toggle trailing whitespace indication  
-`Ctrl-L` - Format actual paragraph (`gqip`)  
-
+`Shift-Tab` - trailing whitespace indication toggle  
+`Ctrl-L` - format actual paragraph (`gqip`)  
+`Ctrl-U-T` - undo tree toggle (`UndotreeToggle`)  
+`Ctrl-U-X` - clear undo history  
 
 ## .gvimrc
 
