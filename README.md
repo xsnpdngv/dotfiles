@@ -43,13 +43,13 @@ use.
 
 ### Mappings
 
-`F2` - toggle pastee  
+`F2` - toggle paste  
 `/` - open/close fold (`za`)  
 `Tab` - change window (`C-w-w`)  
-`Shift-Tab` - open new tab with file explorer (`Texplore`)  
+`Shift-Tab` - open new tab with file explorer (`:Texplore`)  
 `Ctrl-L` - format actual paragraph (`gqip`)  
 `gu` - toggle undo tree (`:UndotreeToggle`)  
-`-u` - clear undo history  
+`-u` - clear undo history (`:call ClearUndo()`)  
 
 ## .gvimrc
 
