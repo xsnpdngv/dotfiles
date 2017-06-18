@@ -20,6 +20,7 @@ set history=500    " command line history persistence
 set ff=unix        " use unix file format
 set encoding=utf-8 " set UTF-8 file encoding
 set backspace=indent,eol,start " backspace to go over everything
+set list listchars=tab:»\ ,trail:· " visualize tabs and trailing spaces
 
 " Get rid of the delay when pressing O (for example)
 " http://stackoverflow.com/questions/2158516/vim-delay-before-o-opens-a-new-line
@@ -43,8 +44,8 @@ function! ClearUndo()
     unlet old_undolevels
 endfunction
 
-" Ctrl-U-X to clear undo history
-map <C-U><C-X> :call ClearUndo()<CR>
+" -u to clear undo history
+map -u :call ClearUndo()<CR>
 
 " ----- COLORS --------------------------------------------------------------
 
@@ -85,10 +86,8 @@ nnoremap <C-L> gqip
 " <Tab> to change window
 nnoremap <Tab> <C-w><C-w>
 
-" visualize tabs and trails
-set list listchars=tab:»\ ,trail:·
-" <Shift+Tab> to turn off/on visualization
-nnoremap <S-Tab> :set list!<CR>
+" <Shift+Tab> to show explorer in new tab
+nnoremap <S-Tab> :Texplore<CR>
 
 " use indentation based folding
 set foldmethod=indent foldlevel=99
@@ -175,8 +174,8 @@ silent! set laststatus=2
 
 " undotree is an undo tree visualizer plugin, install (pathogem):
 " cd ~/.vim/bundle && git clone https://github.com/mbbill/undotree
-" Ctrl-U-T to toggle undo tree
-nnoremap <C-U><C-T> :UndotreeToggle<CR>
+" gu to toggle undo tree visualization
+nnoremap gu :UndotreeToggle<CR>
 
 " molokai color scheme to be used if available, install (pathogen):
 " cd ~/.vim/bundle && git clone https://github.com/tomasr/molokai
