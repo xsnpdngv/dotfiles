@@ -58,10 +58,7 @@ if has("autocmd")
     autocmd FileType text setlocal textwidth=78
 
     " restore cursor position
-    autocmd BufWinEnter *
-        \ if line("'\"") <= line("$") |
-        \   exe "normal g`\"" |
-        \ endif
+    autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 else
     set autoindent
 endif
