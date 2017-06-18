@@ -134,6 +134,16 @@ endif
 
 " ----- PLUGINS --------------------------------------------------------------
 
+" Settings for netrw the built-in file explorer plugin
+" NOTE: :Te - open explorer in new tab
+"       :Ve - open explorer on the left
+"       gt/gT - go to next/prev tab
+let g:netrw_banner = 0
+let g:netrw_liststyle = 1
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+
 " Run Vim plugin autoloader: ~/.vim/autoload/pathogen.vim
 " See:     https://github.com/tpope/vim-pathogen
 " Install: mkdir -p ~/.vim/autoload ~/.vim/bundle && \
