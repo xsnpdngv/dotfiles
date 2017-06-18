@@ -151,9 +151,9 @@ endif
 "       gt/gT - go to next/prev tab
 let g:netrw_banner = 0
 let g:netrw_liststyle = 1
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
 let g:netrw_winsize = 25
+"let g:netrw_browse_split = 4
+"let g:netrw_altv = 1
 
 " Run Vim plugin autoloader: ~/.vim/autoload/pathogen.vim
 " See:     https://github.com/tpope/vim-pathogen
