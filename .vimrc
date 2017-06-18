@@ -175,7 +175,7 @@ silent! set laststatus=2
 
 " undotree is an undo tree visualizer plugin, install (pathogem):
 " cd ~/.vim/bundle && git clone https://github.com/mbbill/undotree
-" set :ut to do the same as :UndotreeToggle
+" Ctrl-U-T to toggle undo tree
 nnoremap <C-U><C-T> :UndotreeToggle<CR>
 
 " molokai color scheme to be used if available, install (pathogen):

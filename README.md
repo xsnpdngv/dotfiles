@@ -49,7 +49,7 @@ use.
 `Shift-Tab` - trailing whitespace indication toggle  
 `Ctrl-L` - format actual paragraph (`gqip`)  
 `Ctrl-U-T` - undo tree toggle (`UndotreeToggle`)  
-`Ctrl-U-X` - clear undo history  
+`Ctrl-U-X` - undo history clear  
 
 ## .gvimrc
 
@@ -78,3 +78,4 @@ use.
     - [Markdown Syntax Highlight](https://github.com/plasticboy/vim-markdown)
     - [Vim-airline](https://github.com/bling/vim-airline)
     - [Vim-commentary](https://github.com/tpope/vim-commentary)
+    - [Undotree](https://github.com/mbbill/undotree)
