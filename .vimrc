@@ -1,7 +1,7 @@
 " ============================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  June 18, 2017
+" Last Changed:  June 19, 2017
 " ============================================================================
 
 " ----- GENERAL --------------------------------------------------------------
@@ -19,6 +19,7 @@ set scrolloff=2    " keep lines above/below the cursor visible when scrolling
 set history=500    " command line history persistence
 set ff=unix        " use unix file format
 set encoding=utf-8 " set UTF-8 file encoding
+set cm=blowfish2   " enable strong crypt method for command :X
 set backspace=indent,eol,start " backspace to go over everything
 set list listchars=tab:»\ ,trail:· " visualize tabs and trailing spaces
 
