@@ -48,7 +48,7 @@ use.
 `Tab` - change window (`C-w-w`)  
 `Shift-Tab` - open new tab with file explorer (`:Texplore`)  
 `Ctrl-L` - format actual paragraph (`gqip`)  
-`gu` - toggle undo tree (`:UndotreeToggle`)  
+`Ctrl-U` - toggle undo tree (`:UndotreeToggle`)  
 `-u` - clear undo history (`:call ClearUndo()`)  
 
 ## .gvimrc

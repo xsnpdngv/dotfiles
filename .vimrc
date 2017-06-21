@@ -1,7 +1,7 @@
 " ============================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  June 19, 2017
+" Last Changed:  June 21, 2017
 " ============================================================================
 
 " ----- GENERAL --------------------------------------------------------------
@@ -175,8 +175,8 @@ silent! set laststatus=2
 
 " undotree is an undo tree visualizer plugin, install (pathogem):
 " cd ~/.vim/bundle && git clone https://github.com/mbbill/undotree
-" gu to toggle undo tree visualization
-nnoremap gu :UndotreeToggle<CR>
+" Ctrl-U to toggle undo tree visualization
+nnoremap <C-u> :UndotreeToggle<CR>
 
 " molokai color scheme to be used if available, install (pathogen):
 " cd ~/.vim/bundle && git clone https://github.com/tomasr/molokai
