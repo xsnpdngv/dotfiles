@@ -26,7 +26,7 @@ use.
 - Improved search
 - Filetype based
     - syntax highlighting
-    - Automatic indentation
+    - automatic indentation
 - Unix file format
 - UTF-8 encoding
 - Persistent undo
@@ -40,6 +40,7 @@ use.
 - Mouse enablement even in terminal
 - Plugin autoloading (Pathogen)
 - Colorscheme setting (Molokai)
+- Non-ASCII character highlighting & removal
 
 ### Mappings
 
