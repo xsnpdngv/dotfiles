@@ -54,9 +54,14 @@ if &t_Co > 2 || has("gui_running") " if terminal has colors
     syntax on     " syntax highlight
     set hlsearch  " search pattern highlight
     set incsearch " dynamic search pattern highlight
+
     " mark first overlength character (@81)
     highlight OverLength ctermfg=white ctermbg=darkgrey
     match OverLength /\%81v./
+
+    " highlight non-ascii characters in red
+    syntax match nonascii "[^\x00-\x7f]"
+    highlight nonascii ctermfg=white ctermbg=red
 endif
 
 " ----- AUTOCOMMANDS --------------------------------------------------------
@@ -95,8 +100,11 @@ set foldmethod=indent foldlevel=99
 " <\> to open/close fold
 nnoremap \ za
 
-" :UU to convert to unix file format (and save it)
-command UU w ++ff=unix
+" :ToUnix to convert to unix file format (and save it)
+command ToUnix w ++ff=unix
+
+" :ToAscii to remove each non-ascii character from buffer
+command ToAscii %s/[^\x00-\x7f]//g
 
 " ----- MOUSE ----------------------------------------------------------------
 
