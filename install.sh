@@ -3,7 +3,7 @@
 # @file    install.sh
 # @brief   shell script to install bash profile, Vim config and plugins
 # @author  Tamas Dezso <dezso.t.tamas@gmail.com>
-# @date    June 18, 2017
+# @date    October 13, 2017
 # ==========================================================================
 
 if [ $# -eq 0 ]
@@ -24,6 +24,8 @@ PLUGINS=(
     "https://github.com/bling/vim-airline"                # Fancy status line
     "https://github.com/tpope/vim-commentary"             # Comment stuff out
     "https://github.com/mbbill/undotree.git"              # Undotree visualizer
+    "https://github.com/majutsushi/tagbar.git"            # Tagbar
+    "https://github.com/ctrlpvim/ctrlp.vim.git"           # Ctrlp
 )
 
 # install plugin autoloader pathogen (if not yet present)
