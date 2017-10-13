@@ -45,12 +45,19 @@ use.
 ### Mappings
 
 `F2` - toggle paste  
+`F8` - toggle tagbar  
 `/` - open/close fold (`za`)  
 `Tab` - change window (`C-w-w`)  
 `Shift-Tab` - open new tab with file explorer (`:Texplore`)  
 `Ctrl-L` - format actual paragraph (`gqip`)  
 `Ctrl-U` - toggle undo tree (`:UndotreeToggle`)  
 `-u` - clear undo history (`:call ClearUndo()`)  
+`ct` - generate ctags  
+`C-]` - go declaration/definition  
+`C-t` - go back  
+`gb` - list buffers to select  
+`gd` - list buffers to close  
+`C-p` - list files / buffers / most recent files to easy open (`C-<up>`, `C-<down>` to change)  
 
 ## .gvimrc
 
@@ -80,3 +87,5 @@ use.
     - [Vim-airline](https://github.com/bling/vim-airline)
     - [Vim-commentary](https://github.com/tpope/vim-commentary)
     - [Undotree](https://github.com/mbbill/undotree)
+    - [Tagbar](https://github.com/majutsushi/tagbar.git")
+    - [Ctrlp](https://github.com/ctrlpvim/ctrlp.vim.git")

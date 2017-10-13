@@ -1,7 +1,7 @@
 " ============================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  June 21, 2017
+" Last Changed:  October 13, 2017
 " ============================================================================
 
 " ----- GENERAL --------------------------------------------------------------
@@ -56,12 +56,15 @@ if &t_Co > 2 || has("gui_running") " if terminal has colors
     set incsearch " dynamic search pattern highlight
 
     " mark first overlength character (@81)
-    highlight OverLength ctermfg=white ctermbg=darkgrey
+    highlight OverLength ctermfg=white ctermbg=darkgray
     match OverLength /\%81v./
 
-    " highlight non-ascii characters in red
-    syntax match nonascii "[^\x00-\x7f]"
-    highlight nonascii ctermfg=white ctermbg=red
+    " highlight non-ASCII characters
+    highlight NonAscii ctermfg=black ctermbg=red
+    match NonAscii "[^\x00-\x7f]"
+
+    " set highlight for search
+    highlight Search cterm=NONE ctermfg=white ctermbg=blue
 endif
 
 " ----- AUTOCOMMANDS --------------------------------------------------------
@@ -86,6 +89,9 @@ endif
 " <F2> tp toggle paste mode
 set pastetoggle=<F2>
 
+" <F8> to toggle tagbar
+nmap <F8> :TagbarToggle<CR>
+
 " <Ctrl+L> to format actual paragraph
 nnoremap <C-L> gqip
 
@@ -96,15 +102,27 @@ nnoremap <Tab> <C-w><C-w>
 nnoremap <S-Tab> :Texplore<CR>
 
 " use indentation based folding
-set foldmethod=indent foldlevel=99
+"set foldmethod=indent foldlevel=99
 " <\> to open/close fold
-nnoremap \ za
+"nnoremap \ za
+
+" list buffers and offers the selection to open
+nnoremap gb :ls<CR>:b<Space>
+
+" list buffers and offers the selection to close
+nnoremap gd :ls<CR>:bd<Space>
+
+" vertically split window on pipe
+nnoremap \| :vsplit<CR>
+
+" run ctags for ct
+nnoremap ct :!ctags -R -f ./.git/tags .<CR><CR>
 
 " :ToUnix to convert to unix file format (and save it)
-command ToUnix w ++ff=unix
+silent command ToUnix w ++ff=unix
 
-" :ToAscii to remove each non-ascii character from buffer
-command ToAscii %s/[^\x00-\x7f]//g
+" :ToAscii to replace each non-ascii characters to space
+silent command ToAscii %s/[^\x00-\x7f]/ /g
 
 " ----- MOUSE ----------------------------------------------------------------
 

@@ -29,8 +29,8 @@ PLUGINS=(
 )
 
 # install plugin autoloader pathogen (if not yet present)
-# see: https://github.com/tpope/vim-pathogen
-# remember to put `pathogen#infect()` to .vimrc to have plugins autoloaded
+# see: https://github.com/tpope/vim-pathogen
+# remember to put `pathogen#infect()` to .vimrc to have plugins autoloaded
 if [ ! -f $VIM/autoload/pathogen.vim ]
 then
     # check if curl is available
