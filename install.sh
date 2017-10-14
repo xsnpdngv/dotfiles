@@ -26,6 +26,7 @@ PLUGINS=(
     "https://github.com/mbbill/undotree.git"              # Undotree visualizer
     "https://github.com/majutsushi/tagbar.git"            # Tagbar
     "https://github.com/ctrlpvim/ctrlp.vim.git"           # Ctrlp
+    "https://github.com/mhinz/vim-startify.git"           # Startify
 )
 
 # install plugin autoloader pathogen (if not yet present)

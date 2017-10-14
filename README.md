@@ -93,5 +93,6 @@ use.
     - [Vim-airline](https://github.com/bling/vim-airline)
     - [Vim-commentary](https://github.com/tpope/vim-commentary)
     - [Undotree](https://github.com/mbbill/undotree)
-    - [Tagbar](https://github.com/majutsushi/tagbar.git")
-    - [Ctrlp](https://github.com/ctrlpvim/ctrlp.vim.git")
+    - [Tagbar](https://github.com/majutsushi/tagbar")
+    - [Ctrlp](https://github.com/ctrlpvim/ctrlp.vim")
+    - [Startify](https://github.com/mhinz/vim-startify")
