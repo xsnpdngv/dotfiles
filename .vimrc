@@ -22,6 +22,7 @@ set encoding=utf-8 " set UTF-8 file encoding
 set cm=blowfish2   " enable strong crypt method for command :X
 set backspace=indent,eol,start " backspace to go over everything
 set list listchars=tab:»\ ,trail:· " visualize tabs and trailing spaces
+set tags=tags;/    " search up for a central tags file from nested dir
 
 " Get rid of the delay when pressing O (for example)
 " http://stackoverflow.com/questions/2158516/vim-delay-before-o-opens-a-new-line
@@ -125,7 +126,7 @@ nnoremap 1 :Rexplore<CR>
 nnoremap nh :noh<CR>
 
 " run ctags for ct
-nnoremap ct :!ctags -R -f ./.git/tags .<CR><CR>
+nnoremap ct :!ctags -R<CR><CR>
 
 " :ToUnix to convert to unix file format (and save it)
 silent command! ToUnix w ++ff=unix
