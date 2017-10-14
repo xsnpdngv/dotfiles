@@ -116,6 +116,14 @@ nnoremap gd :ls<CR>:bd<Space>
 " vertically split window on pipe
 nnoremap \| :vsplit<CR>
 
+" map Alt+2 to file explorer and Alt+1 to return to explorer
+nnoremap 2 :Explore <CR>
+nnoremap 3 :Texplore<CR>
+nnoremap 1 :Rexplore<CR>
+
+" map Alt+0 to :nohighlight
+nnoremap nh :noh<CR>
+
 " run ctags for ct
 nnoremap ct :!ctags -R -f ./.git/tags .<CR><CR>
 
@@ -207,4 +215,4 @@ nnoremap <C-u> :UndotreeToggle<CR>
 
 " molokai color scheme to be used if available, install (pathogen):
 " cd ~/.vim/bundle && git clone https://github.com/tomasr/molokai
-"silent! colorscheme molokai
+silent! colorscheme molokai

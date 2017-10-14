@@ -58,6 +58,10 @@ use.
 `gb` - list buffers to select  
 `gd` - list buffers to close  
 `C-p` - list files / buffers / most recent files to easy open (`C-<up>`, `C-<down>` to change)  
+`Alt+2` - opens file explorer (`:Explore`)  
+`Alt+3` - opens file explorer in new tab (`:Texplore`)  
+`Alt+1` - returns to previous file explorer (`:Rexplore`)  
+`nh` - turns off highlighting for searched pattern (`:noh`)  
 
 ## .gvimrc
 
