@@ -122,6 +122,9 @@ nnoremap 2 :Explore <CR>
 nnoremap 3 :Texplore<CR>
 nnoremap 1 :Rexplore<CR>
 
+" map Ctrl+B to open buffer list of Ctrlp
+nnoremap <C-B> :CtrlPBuffer<CR>
+
 " map Alt+0 to :nohighlight
 nnoremap nh :noh<CR>
 

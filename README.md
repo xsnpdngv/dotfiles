@@ -53,8 +53,8 @@ use.
 `Ctrl-U` - toggle undo tree (`:UndotreeToggle`)  
 `-u` - clear undo history (`:call ClearUndo()`)  
 `ct` - generate ctags  
-`C-]` - go declaration/definition  
-`C-t` - go back  
+`Ctrl-]` - go declaration/definition  
+`Ctrl-t` - go back  
 `gb` - list buffers to select  
 `gd` - list buffers to close  
 `C-p` - list files / buffers / most recent files to easy open (`C-<up>`, `C-<down>` to change)  
@@ -62,6 +62,8 @@ use.
 `Alt+3` - opens file explorer in new tab (`:Texplore`)  
 `Alt+1` - returns to previous file explorer (`:Rexplore`)  
 `nh` - turns off highlighting for searched pattern (`:noh`)  
+`Ctrl+P` - file list explorer of CtrlP plugin  
+`Ctrl+B` - buffer list explorer of CtrlP plugin  
 
 ## .gvimrc
 
