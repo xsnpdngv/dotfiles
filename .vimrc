@@ -125,8 +125,8 @@ nnoremap 1 :Rexplore<CR>
 " map Ctrl+B to open buffer list of Ctrlp
 nnoremap <C-B> :CtrlPBuffer<CR>
 
-" map Alt+0 to :nohighlight
-nnoremap nh :noh<CR>
+" map double comma to :nohighlight
+nnoremap ,, :noh<CR>
 
 " run ctags for ct
 nnoremap ct :!ctags -R<CR><CR>

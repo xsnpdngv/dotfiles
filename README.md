@@ -61,7 +61,7 @@ use.
 `Alt+2` - opens file explorer (`:Explore`)  
 `Alt+3` - opens file explorer in new tab (`:Texplore`)  
 `Alt+1` - returns to previous file explorer (`:Rexplore`)  
-`nh` - turns off highlighting for searched pattern (`:noh`)  
+`,,` - turns off highlighting for searched pattern (`:noh`)  
 `Ctrl+P` - file list explorer of CtrlP plugin  
 `Ctrl+B` - buffer list explorer of CtrlP plugin  
 
