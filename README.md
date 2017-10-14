@@ -48,7 +48,7 @@ use.
 `F8` - toggle tagbar  
 `/` - open/close fold (`za`)  
 `Tab` - change window (`C-w-w`)  
-`Shift-Tab` - open new tab with file explorer (`:Texplore`)  
+`Shift-Tab` - change window backwards (`C-w-Left`)  
 `Ctrl-L` - format actual paragraph (`gqip`)  
 `Ctrl-U` - toggle undo tree (`:UndotreeToggle`)  
 `-u` - clear undo history (`:call ClearUndo()`)  

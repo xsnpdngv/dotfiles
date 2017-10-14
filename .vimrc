@@ -98,10 +98,10 @@ nmap <F8> :TagbarToggle<CR>
 nnoremap <C-L> gqip
 
 " <Tab> to change window
-nnoremap <Tab> <C-w><C-w>
+nnoremap <Tab> <C-w>w
 
-" <Shift+Tab> to show explorer in new tab
-nnoremap <S-Tab> :Texplore<CR>
+" <Shift+Tab> to change window backwards
+nnoremap <S-Tab> <C-w><Left>
 
 " use indentation based folding
 "set foldmethod=indent foldlevel=99
