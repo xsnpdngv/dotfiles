@@ -54,6 +54,7 @@ if &t_Co > 2 || has("gui_running") " if terminal has colors
     syntax on     " syntax highlight
     set hlsearch  " search pattern highlight
     set incsearch " dynamic search pattern highlight
+    let g:load_doxygen_syntax=1
 
     " mark first overlength character (@81)
     highlight OverLength ctermfg=white ctermbg=darkgray
@@ -119,10 +120,10 @@ nnoremap \| :vsplit<CR>
 nnoremap ct :!ctags -R -f ./.git/tags .<CR><CR>
 
 " :ToUnix to convert to unix file format (and save it)
-silent command ToUnix w ++ff=unix
+silent command! ToUnix w ++ff=unix
 
 " :ToAscii to replace each non-ascii characters to space
-silent command ToAscii %s/[^\x00-\x7f]/ /g
+silent command! ToAscii %s/[^\x00-\x7f]/ /g
 
 " ----- MOUSE ----------------------------------------------------------------
 
@@ -206,4 +207,4 @@ nnoremap <C-u> :UndotreeToggle<CR>
 
 " molokai color scheme to be used if available, install (pathogen):
 " cd ~/.vim/bundle && git clone https://github.com/tomasr/molokai
-silent! colorscheme molokai
+"silent! colorscheme molokai
