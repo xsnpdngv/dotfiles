@@ -3,7 +3,7 @@
 # @file    install.sh
 # @brief   shell script to install bash profile, Vim config and plugins
 # @author  Tamas Dezso <dezso.t.tamas@gmail.com>
-# @date    October 13, 2017
+# @date    October 15, 2017
 # ==========================================================================
 
 if [ $# -eq 0 ]
@@ -26,6 +26,7 @@ PLUGINS=(
     "https://github.com/mbbill/undotree.git"              # Undotree visualizer
     "https://github.com/majutsushi/tagbar.git"            # Tagbar
     "https://github.com/ctrlpvim/ctrlp.vim.git"           # Ctrlp
+    "https://github.com/tpope/vim-fugitive.git"           # Fugitive
     "https://github.com/mhinz/vim-startify.git"           # Startify
 )
 

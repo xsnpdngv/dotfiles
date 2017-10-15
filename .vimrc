@@ -1,7 +1,7 @@
 " ============================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  October 13, 2017
+" Last Changed:  October 15, 2017
 " ============================================================================
 
 " ----- GENERAL --------------------------------------------------------------
@@ -188,11 +188,12 @@ endif
 " NOTE: :Te - open explorer in new tab
 "       :Ve - open explorer on the left
 "       gt/gT - go to next/prev tab
-let g:netrw_banner = 0
-let g:netrw_liststyle = 1
-let g:netrw_winsize = 25
+"let g:netrw_banner = 0
+"let g:netrw_liststyle = 1
+"let g:netrw_winsize = 25
 "let g:netrw_browse_split = 4
 "let g:netrw_altv = 1
+let g:netrw_list_hide = '.*\.swp$,.*\.o$,^tags$' " liststyle = 1 overrides this
 
 " Run Vim plugin autoloader: ~/.vim/autoload/pathogen.vim
 " See:     https://github.com/tpope/vim-pathogen

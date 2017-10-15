@@ -95,4 +95,5 @@ use.
     - [Undotree](https://github.com/mbbill/undotree)
     - [Tagbar](https://github.com/majutsushi/tagbar")
     - [Ctrlp](https://github.com/ctrlpvim/ctrlp.vim")
+    - [Fugitive](https://github.com/tpope/vim-fugitive.git)
     - [Startify](https://github.com/mhinz/vim-startify")
