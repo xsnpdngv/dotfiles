@@ -14,6 +14,7 @@ set softtabstop=0  " turn mixing of tabs and spaces off
 set ruler          " show cursor position all the time
 set showcmd        " show incomplete commands
 set showmode       " show mode
+set autoread       " refresh buffer is file changes outside vim
 set nojoinspaces   " use only one space instead of two if joining lines
 set scrolloff=2    " keep lines above/below the cursor visible when scrolling
 set history=500    " command line history persistence
@@ -117,11 +118,6 @@ nnoremap gd :ls<CR>:bd<Space>
 " vertically split window on pipe
 nnoremap \| :vsplit<CR>
 
-" map Alt+2 to file explorer and Alt+1 to return to explorer
-nnoremap 2 :Explore <CR>
-nnoremap 3 :Texplore<CR>
-nnoremap 1 :Rexplore<CR>
-
 " map Ctrl+B to open buffer list of Ctrlp
 nnoremap <C-B> :CtrlPBuffer<CR>
 
@@ -220,4 +216,4 @@ nnoremap <C-u> :UndotreeToggle<CR>
 
 " molokai color scheme to be used if available, install (pathogen):
 " cd ~/.vim/bundle && git clone https://github.com/tomasr/molokai
-silent! colorscheme molokai
+"silent! colorscheme molokai
