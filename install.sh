@@ -23,11 +23,11 @@ PLUGINS=(
     "https://github.com/plasticboy/vim-markdown"          # Markdown highlight
     "https://github.com/bling/vim-airline"                # Fancy status line
     "https://github.com/tpope/vim-commentary"             # Comment stuff out
-    "https://github.com/mbbill/undotree.git"              # Undotree visualizer
-    "https://github.com/majutsushi/tagbar.git"            # Tagbar
-    "https://github.com/ctrlpvim/ctrlp.vim.git"           # Ctrlp
-    "https://github.com/tpope/vim-fugitive.git"           # Fugitive
-    "https://github.com/mhinz/vim-startify.git"           # Startify
+    "https://github.com/mbbill/undotree"                  # Undotree visualizer
+    "https://github.com/majutsushi/tagbar"                # Tagbar
+    "https://github.com/ctrlpvim/ctrlp.vim"               # Ctrlp
+    "https://github.com/tpope/vim-fugitive"               # Fugitive
+    "https://github.com/mhinz/vim-startify"               # Startify
 )
 
 # install plugin autoloader pathogen (if not yet present)
