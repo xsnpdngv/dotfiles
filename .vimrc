@@ -11,6 +11,7 @@ set tabstop=4      " set tab length in spaces (manual indent)
 set shiftwidth=4   " set the number of spaces inserted for a tab (autoindent)
 set expandtab      " convert tabs to spaces
 set softtabstop=0  " turn mixing of tabs and spaces off
+set nowrap         " do not soft wrap long lines
 set ruler          " show cursor position all the time
 set showcmd        " show incomplete commands
 set showmode       " show mode
