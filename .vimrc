@@ -96,6 +96,8 @@ set pastetoggle=<F2>
 " <F8> to toggle tagbar
 nmap <F8> :TagbarToggle<CR>
 
+map <C-n> :NERDTreeToggle<CR>
+
 " <Ctrl+L> to format actual paragraph
 nnoremap <C-L> gqip
 
@@ -127,6 +129,9 @@ nnoremap ,, :noh<CR>
 
 " run ctags for ct
 nnoremap ct :!ctags -R<CR><CR>
+
+" Q to quit all (:qa)
+silent command! Q qa
 
 " :ToUnix to convert to unix file format (and save it)
 silent command! ToUnix w ++ff=unix

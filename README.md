@@ -44,26 +44,23 @@ use.
 
 ### Mappings
 
-`F2` - toggle paste  
-`F8` - toggle tagbar  
-`/` - open/close fold (`za`)  
-`Tab` - change window (`C-w-w`)  
-`Shift-Tab` - change window backwards (`C-w-Left`)  
-`Ctrl-L` - format actual paragraph (`gqip`)  
-`Ctrl-U` - toggle undo tree (`:UndotreeToggle`)  
-`-u` - clear undo history (`:call ClearUndo()`)  
-`ct` - generate ctags  
-`Ctrl-]` - go declaration/definition  
-`Ctrl-t` - go back  
-`gb` - list buffers to select  
-`gd` - list buffers to close  
-`C-p` - list files / buffers / most recent files to easy open (`C-<up>`, `C-<down>` to change)  
-`Alt+2` - opens file explorer (`:Explore`)  
-`Alt+3` - opens file explorer in new tab (`:Texplore`)  
-`Alt+1` - returns to previous file explorer (`:Rexplore`)  
-`,,` - turns off highlighting for searched pattern (`:noh`)  
+`F2`     - toggle paste  
+`F8`     - toggle tagbar  
+`/`      - open/close fold (`za`)  
+`-u`     - clear undo history (`:call ClearUndo()`)  
+`ct`     - generate ctags  
+`gb`     - list buffers to select  
+`gd`     - list buffers to close  
+`,,`     - turns off highlighting for searched pattern (`:noh`)  
+`Ctrl+]` - go declaration/definition  
+`Ctrl+T` - go back to previous position  
+`Ctrl+N` - toggle NERD Tree  
 `Ctrl+P` - file list explorer of CtrlP plugin  
 `Ctrl+B` - buffer list explorer of CtrlP plugin  
+`Ctrl+L` - format actual paragraph (`gqip`)  
+`Ctrl+U` - toggle undo tree (`:UndotreeToggle`)  
+`Tab`    - change window (`C-w-w`)  
+`Shift-Tab` - change window backwards (`C-w-Left`)  
 
 ## .gvimrc
 
@@ -97,3 +94,4 @@ use.
     - [Ctrlp](https://github.com/ctrlpvim/ctrlp.vim")
     - [Fugitive](https://github.com/tpope/vim-fugitive.git)
     - [Startify](https://github.com/mhinz/vim-startify")
+    - [NERD Tree](https://github.com/scrooloose/nerdtree.git)
