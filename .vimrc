@@ -1,7 +1,7 @@
 " ============================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  October 25, 2017
+" Last Changed:  October 26, 2017
 " ============================================================================
 
 " ----- GENERAL --------------------------------------------------------------
@@ -224,3 +224,10 @@ nnoremap <C-u> :UndotreeToggle<CR>
 " molokai color scheme to be used if available, install (pathogen):
 " cd ~/.vim/bundle && git clone https://github.com/tomasr/molokai
 "silent! colorscheme molokai
+
+" vim-session is an enhanced session handling plugin, install (pathogen):
+" cd ~/.vim/bundle && git clone https://github.com/xolox/vim-session && \
+"                     git clone https://github.com/xolox/vim-misc
+" Disable prompt at start and exit
+let g:session_autosave='no'
+let g:session_autoload='no'
