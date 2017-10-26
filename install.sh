@@ -3,7 +3,7 @@
 # @file    install.sh
 # @brief   shell script to install bash profile, Vim config and plugins
 # @author  Tamas Dezso <dezso.t.tamas@gmail.com>
-# @date    October 18, 2017
+# @date    October 26, 2017
 # ==========================================================================
 
 if [ $# -eq 0 ]
@@ -27,8 +27,9 @@ PLUGINS=(
     "https://github.com/majutsushi/tagbar"                # Tagbar
     "https://github.com/ctrlpvim/ctrlp.vim"               # Ctrlp
     "https://github.com/tpope/vim-fugitive"               # Fugitive
-    "https://github.com/mhinz/vim-startify"               # Startify
     "https://github.com/scrooloose/nerdtree"              # NERD Tree
+    "https://github.com/xolox/vim-misc"                   # needed for vim-session
+    "https://github.com/xolox/vim-session"                # Extended sessions
 )
 
 # install plugin autoloader pathogen (if not yet present)
