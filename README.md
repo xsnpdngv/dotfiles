@@ -41,6 +41,7 @@ use.
 - Plugin autoloading (Pathogen)
 - Colorscheme setting (Molokai)
 - Non-ASCII character highlighting & removal
+- Fix difficult to read colors for vimdiff
 
 ### Mappings
 
@@ -68,6 +69,14 @@ use.
 - Window sizing and positioning
 - Toolbar, Menubar, Scrollbar removal
 
+## .gitconfig
+
+- Useful basic settings and aliases
+
+## .gitignore
+
+- Global ignore file for git
+
 
 ## install.sh
 
@@ -81,6 +90,8 @@ use.
     - .bash_aliases
     - .vimrc
     - .gvimrc
+    - .gitconfig
+    - .gitignore
 - Vim plugin autoloader download to `$HOME/.vim/autoload/`:
     - [Pathogen](https://tpo.pe/pathogen.vim)
 - Vim plugin cloning from GitHub to `$HOME/.vim/bundle/`:

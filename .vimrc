@@ -1,7 +1,7 @@
 " ============================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  October 26, 2017
+" Last Changed:  February 1, 2018
 " ============================================================================
 
 " ----- GENERAL --------------------------------------------------------------
@@ -72,6 +72,11 @@ if &t_Co > 2 || has("gui_running") " if terminal has colors
     highlight Search cterm=NONE ctermfg=white ctermbg=blue
 endif
 
+" Fix the difficult-to-read default setting for diff text highlighting.  The
+" bang (!) is required since we are overwriting the DiffText setting. The
+" highlighting
+highlight! link DiffText Todo
+
 " ----- AUTOCOMMANDS --------------------------------------------------------
 
 if has("autocmd")
@@ -97,6 +102,7 @@ set pastetoggle=<F2>
 " <F8> to toggle tagbar
 nmap <F8> :TagbarToggle<CR>
 
+" <Ctrl+n> to toggle NERD Tree
 map <C-n> :NERDTreeToggle<CR>
 
 " <Ctrl+L> to format actual paragraph

@@ -1,0 +1,29 @@
+[user]
+	name = xsnpdngv
+	email = dezso.t.tamas@gmail.com
+[branch "master"]
+	rebase = true
+[alias]
+	update       = !git pull origin master --rebase --recurse-submodules && git submodule update --init
+	update-sm    = submodule update --init
+	upload-draft = push origin HEAD:refs/drafts/master # works on branch to
+	upload       = push origin HEAD:refs/for/master    # works on branch to
+	ls-diff      = diff-tree --no-commit-id --name-only -r # <commit-sha>
+	unstage      = reset HEAD --
+	dt           = difftool HEAD^ HEAD
+	lg           = log --decorate --stat
+	l            = log --oneline -n # <number-of-commits>
+	last         = log -1 HEAD
+	ls           = ls-files
+[color]
+	ui = true
+[diff]
+	tool = vimdiff
+[mergetool]
+	vim
+[merge]
+	tool = vimdiff
+[clean]
+	requireForce = false
+[core]
+	excludesfile = ~/.gitignore

@@ -3,13 +3,13 @@
 # @file    install.sh
 # @brief   shell script to install bash profile, Vim config and plugins
 # @author  Tamas Dezso <dezso.t.tamas@gmail.com>
-# @date    October 26, 2017
+# @date    February 1, 2018
 # ==========================================================================
 
 if [ $# -eq 0 ]
 then
-    # copy bash and Vim profile
-    cp -i .bash* .vimrc .gvimrc $HOME/
+    # copy bash and Vim profile, git config
+    cp -i .bash* .vimrc .gvimrc .gitignore .gitconfig $HOME/
 else
     # copy files given as arguments
     cp -i $@ $HOME/
