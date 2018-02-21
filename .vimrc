@@ -1,7 +1,7 @@
 " ============================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  February 1, 2018
+" Last Changed:  March 10, 2018
 " ============================================================================
 
 " ----- GENERAL --------------------------------------------------------------
@@ -26,6 +26,9 @@ set backspace=indent,eol,start " backspace to go over everything
 set list listchars=tab:»\ ,trail:· " visualize tabs and trailing spaces
 set background=dark " set dark background to have proper colors
 set tags=tags;/    " search up for a central tags file from nested dir
+set diffopt+=iwhite       " ignore whitespaces
+set diffopt+=foldcolumn:0 " don't show extra column for folds
+set diffopt+=context:12   " show this many lines around diffs
 
 " Get rid of the delay when pressing O (for example)
 " http://stackoverflow.com/questions/2158516/vim-delay-before-o-opens-a-new-line
@@ -70,12 +73,17 @@ if &t_Co > 2 || has("gui_running") " if terminal has colors
 
     " set highlight for search
     highlight Search cterm=NONE ctermfg=white ctermbg=blue
-endif
 
-" Fix the difficult-to-read default setting for diff text highlighting.  The
-" bang (!) is required since we are overwriting the DiffText setting. The
-" highlighting
-highlight! link DiffText Todo
+    " Fix the difficult-to-read default setting for diff text highlighting.
+    "hi Todo       cterm=none ctermfg=White ctermbg=Red    gui=none guifg=White    guibg=Red
+    hi DiffText   cterm=none ctermfg=18    ctermbg=Yellow "gui=none guifg=Black    guibg=Yellow
+    hi DiffChange cterm=none ctermfg=none  ctermbg=53     "gui=none guifg=none     guibg=none
+    hi DiffAdd    cterm=none ctermfg=none  ctermbg=53     "gui=none guifg=none     guibg=DarkGray
+    hi DiffDelete cterm=none ctermfg=53    ctermbg=Black  "gui=none guifg=DarkGrey guibg=Black
+    hi VertSplit  cterm=none ctermfg=none  ctermbg=Black
+    hi Visual     cterm=none ctermfg=Black ctermbg=Green
+    hi Constant   cterm=none ctermfg=208   ctermbg=none
+endif
 
 " ----- AUTOCOMMANDS --------------------------------------------------------
 
