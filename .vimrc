@@ -148,6 +148,9 @@ nnoremap ct :!ctags -R<CR><CR>
 " Q to quit all (:qa)
 silent command! Q qa
 
+" du to update diff
+nnoremap du :diffupdate<CR>
+
 " :ToUnix to convert to unix file format (and save it)
 silent command! ToUnix w ++ff=unix
 
