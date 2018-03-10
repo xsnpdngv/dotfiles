@@ -148,8 +148,20 @@ nnoremap ct :!ctags -R<CR><CR>
 " Q to quit all (:qa)
 silent command! Q qa
 
+" W to force write (:w!)
+silent command! W w!
+
 " du to update diff
 nnoremap du :diffupdate<CR>
+
+" Ctrl-Down/Up to next/prev difference
+nnoremap [B ]czz
+nnoremap [A [czz
+
+" Alt-1/2/3 to diffget LOCAL/BASE/REMOTE
+nnoremap 1 :diffget LOCAL<CR>
+nnoremap 2 :diffget BASE<CR>
+nnoremap 3 :diffget REMOTE<CR>
 
 " :ToUnix to convert to unix file format (and save it)
 silent command! ToUnix w ++ff=unix

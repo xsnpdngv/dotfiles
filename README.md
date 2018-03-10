@@ -53,6 +53,8 @@ use.
 `gb`     - list buffers to select  
 `gd`     - list buffers to close  
 `,,`     - turns off highlighting for searched pattern (`:noh`)  
+`Alt+1/2/3`  - diffget LOCAL/BASE/REMOTE  
+`Ctrl+Down/Up` - go to next/prev difference  
 `Ctrl+]` - go declaration/definition  
 `Ctrl+T` - go back to previous position  
 `Ctrl+N` - toggle NERD Tree  
