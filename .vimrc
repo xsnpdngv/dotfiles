@@ -1,7 +1,7 @@
 " ============================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  March 10, 2018
+" Last Changed:  March 13, 2018
 " ============================================================================
 
 " ----- GENERAL --------------------------------------------------------------
@@ -158,10 +158,14 @@ nnoremap du :diffupdate<CR>
 nnoremap [B ]czz
 nnoremap [A [czz
 
-" Alt-1/2/3 to diffget LOCAL/BASE/REMOTE
-nnoremap 1 :diffget LOCAL<CR>
-nnoremap 2 :diffget BASE<CR>
-nnoremap 3 :diffget REMOTE<CR>
+" Alt-1/2/3 to diffget LOCAL/BASE/REMOTE and update diff
+nnoremap 1 :diffget LOCAL  <bar>:diffupdate<CR>
+nnoremap 2 :diffget BASE   <bar>:diffupdate<CR>
+nnoremap 3 :diffget REMOTE <bar>:diffupdate<CR>
+
+" do/dp to update diff too
+nnoremap do dodu
+nnoremap dp dpdu
 
 " :ToUnix to convert to unix file format (and save it)
 silent command! ToUnix w ++ff=unix

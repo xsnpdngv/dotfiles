@@ -19,10 +19,28 @@
 	ui = true
 [diff]
 	tool = vimdiff
-[mergetool]
-	vim
+	algorithm = minimal     # Spend extra time to make sure the smallest possible diff is produced
+	indentHeuristic = true  # Shift diff hunk boundaries to make patches easier to read
+	wsErrorHighlight = all  # Highlight whitespace errors
 [merge]
 	tool = vimdiff
+# +-------+--------+--------+
+# | LOCAL |  BASE  | REMOTE |
+# +-------+--------+--------+
+# |         merged          |
+# +-------------------------+
+#
+#	tool = vimdiff2
+# +-------+--------+--------+
+# | LOCAL | merged | REMOTE |
+# +-------+--------+--------+
+#
+#	tool = vimdiff3
+# +-------------------------+
+# |         merged          |
+# +-------------------------+
+#	conflictStyle = diff3   # Use ||||| markers too for original text
+#	conflictStyle = merge   # Default
 [clean]
 	requireForce = false
 [core]
