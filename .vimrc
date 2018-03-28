@@ -1,7 +1,7 @@
 " ============================================================================
 " File:          .vimrc
 " Maintainer:    Tamas Dezso <dezso.t.tamas@gmail.com>
-" Last Changed:  March 13, 2018
+" Last Changed:  March 28, 2018
 " ============================================================================
 
 " ----- GENERAL --------------------------------------------------------------
@@ -9,6 +9,8 @@
 set nocompatible   " enable Vim specific settings instead of vi compatibility
 set tabstop=4      " set tab length in spaces (manual indent)
 set shiftwidth=4   " set the number of spaces inserted for a tab (autoindent)
+set shiftround     " use multiple of shiftwidth when indenting with '<' and '>'
+set copyindent     " copy the previous indentation on autoindenting
 set expandtab      " convert tabs to spaces
 set softtabstop=0  " turn mixing of tabs and spaces off
 set nowrap         " do not soft wrap long lines
@@ -29,6 +31,8 @@ set tags=tags;/    " search up for a central tags file from nested dir
 set diffopt+=iwhite       " ignore whitespaces
 set diffopt+=foldcolumn:0 " don't show extra column for folds
 set diffopt+=context:12   " show this many lines around diffs
+set smartcase      " ignore case if search pattern is all lowercase,
+                   " case-sensitive otherwise
 
 " Get rid of the delay when pressing O (for example)
 " http://stackoverflow.com/questions/2158516/vim-delay-before-o-opens-a-new-line
@@ -75,7 +79,7 @@ if &t_Co > 2 || has("gui_running") " if terminal has colors
     highlight Search cterm=NONE ctermfg=white ctermbg=blue
 
     " Fix the difficult-to-read default setting for diff text highlighting.
-    "hi Todo       cterm=none ctermfg=White ctermbg=Red    gui=none guifg=White    guibg=Red
+    hi Todo       cterm=none ctermfg=White ctermbg=Red    gui=none guifg=White    guibg=Red
     hi DiffText   cterm=none ctermfg=18    ctermbg=Yellow "gui=none guifg=Black    guibg=Yellow
     hi DiffChange cterm=none ctermfg=none  ctermbg=53     "gui=none guifg=none     guibg=none
     hi DiffAdd    cterm=none ctermfg=none  ctermbg=53     "gui=none guifg=none     guibg=DarkGray
@@ -157,6 +161,8 @@ nnoremap du :diffupdate<CR>
 " Ctrl-Down/Up to next/prev difference
 nnoremap [B ]czz
 nnoremap [A [czz
+nnoremap ] ]c
+nnoremap [ [c
 
 " Alt-1/2/3 to diffget LOCAL/BASE/REMOTE and update diff
 nnoremap 1 :diffget LOCAL  <bar>:diffupdate<CR>
@@ -166,6 +172,8 @@ nnoremap 3 :diffget REMOTE <bar>:diffupdate<CR>
 " do/dp to update diff too
 nnoremap do dodu
 nnoremap dp dpdu
+
+command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
 
 " :ToUnix to convert to unix file format (and save it)
 silent command! ToUnix w ++ff=unix

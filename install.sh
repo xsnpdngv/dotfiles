@@ -3,7 +3,7 @@
 # @file    install.sh
 # @brief   shell script to install bash profile, Vim config and plugins
 # @author  Tamas Dezso <dezso.t.tamas@gmail.com>
-# @date    February 1, 2018
+# @date    March 28, 2018
 # ==========================================================================
 
 if [ $# -eq 0 ]
@@ -30,6 +30,7 @@ PLUGINS=(
     "https://github.com/scrooloose/nerdtree"              # NERD Tree
     "https://github.com/xolox/vim-misc"                   # needed for vim-session
     "https://github.com/xolox/vim-session"                # Extended sessions
+    "https://github.com/chrisbra/vim-diff-enhanced"       # :EnhancedDiff <algorithm>
 )
 
 # install plugin autoloader pathogen (if not yet present)
