@@ -5,6 +5,8 @@ alias vi='vim -p' # Vim to open multiple files in tabs by default
 alias mkae='make'
 alias gpg='gpg2'
 alias pgp='gpg2'
+alias encrypt='openssl enc -base64 -e -bf -in '
+alias decrypt='openssl enc -base64 -d -bf -in '
 
 # if colordiff is installed, use it
 command -v colordiff >/dev/null 2>&1 && alias diff='colordiff'
